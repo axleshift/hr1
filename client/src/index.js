@@ -4,10 +4,13 @@ import { Provider } from 'react-redux'
 import 'core-js'
 
 import App from './App'
+import store from './store'
 import AuthContext from './context/authContext.jsx'
 
 createRoot(document.getElementById('root')).render(
-  <AuthContext>
-    <App />
-  </AuthContext>,
+  <Provider store={store}>
+    <AuthContext>
+      <App />
+    </AuthContext>
+  </Provider>,
 )
