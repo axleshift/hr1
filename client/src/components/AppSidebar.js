@@ -11,16 +11,7 @@ import {
   CImage,
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
-
 import { AppSidebarNav } from './AppSidebarNav'
-
-// import { logo } from 'src/assets/brand/logo'
-import { sygnet } from 'src/assets/brand/sygnet'
-
-import logo from './../../public/images/hr1.png'
-import icon from './../../public/favicon.ico'
-
-// sidebar nav config
 import navigation from '../_nav'
 
 const AppSidebar = () => {
@@ -41,8 +32,14 @@ const AppSidebar = () => {
     >
       <CSidebarHeader className="border-bottom">
         <CSidebarBrand to="/">
-          <CImage fluid src={logo} alt="Logo" height={30} className="sidebar-brand-full" />
-          <CImage src={icon} alt="Logo" height={30} className="sidebar-brand-narrow" />
+          <CImage
+            fluid
+            src="/images/hr1.png"
+            alt="Logo"
+            height={30}
+            className="sidebar-brand-full"
+          />
+          <CImage src="/favicon.ico" alt="Logo" height={30} className="sidebar-brand-narrow" />
         </CSidebarBrand>
         <CCloseButton
           className="d-lg-none"

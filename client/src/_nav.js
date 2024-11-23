@@ -17,34 +17,35 @@ const _nav = [
     component: CNavItem,
     name: 'Dashboard',
     to: '/dashboard',
-    icon: <FontAwesomeIcon icon={faDashboard} customClassName="nav-icon" />,
+    icon: <FontAwesomeIcon icon={faDashboard} className="nav-icon" />,
   },
   {
     component: CNavTitle,
     name: 'RECORD MANAGEMENT',
-    icon: <FontAwesomeIcon icon={faDatabase} className=" me-3" />,
+    icon: <FontAwesomeIcon icon={faDatabase} className="nav-icon" />,
   },
   {
     component: CNavItem,
     name: 'Time and Attendance',
     to: 'recordmanagement/timeandattendance',
-    icon: <FontAwesomeIcon icon={faCalendarDays} className=" me-3" />,
+    icon: <FontAwesomeIcon icon={faCalendarDays} className="nav-icon" />,
   },
   {
     component: CNavItem,
     name: 'Manage Employee',
-    icon: <FontAwesomeIcon icon={faUsers} className=" me-3 " />,
+    to: 'recordmanagement/manageemployee',
+    icon: <FontAwesomeIcon icon={faUsers} className="nav-icon" />,
   },
   {
     component: CNavTitle,
     name: 'testing page',
-    icon: <FontAwesomeIcon icon={faGears} className=" me-3" />,
+    icon: <FontAwesomeIcon icon={faGears} className="nav-icon" />,
   },
   {
     component: CNavItem,
     name: 'login',
     to: '/logintesting',
-    icon: <FontAwesomeIcon icon={faCalendarDays} className=" me-3" />,
+    icon: <FontAwesomeIcon icon={faCalendarDays} className="nav-icon" />,
   },
 ]
 
