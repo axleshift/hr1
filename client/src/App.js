@@ -1,5 +1,5 @@
 import React, { Suspense, useEffect } from 'react'
-import { HashRouter, Route, Routes } from 'react-router-dom'
+import { HashRouter, Route, Routes, Navigate } from 'react-router-dom' // Import Navigate for default redirection
 import { useSelector } from 'react-redux'
 import { CSpinner, useColorModes } from '@coreui/react'
 import './scss/style.scss'
@@ -27,7 +27,7 @@ const App = () => {
     if (!isColorModeSet()) {
       setColorMode(storedTheme)
     }
-  }, [isColorModeSet, setColorMode, storedTheme]) // Updated to correctly include dependencies
+  }, [isColorModeSet, setColorMode, storedTheme]) // Correct dependencies
 
   return (
     <HashRouter>
@@ -39,6 +39,8 @@ const App = () => {
         }
       >
         <Routes>
+          {/* Redirect root ("/") to the Login page */}
+          <Route path="/" element={<Navigate to="/login" replace />} />
           <Route exact path="/login" name="Login Page" element={<Login />} />
           <Route exact path="/register" name="Register Page" element={<Register />} />
           <Route exact path="/404" name="Page 404" element={<Page404 />} />

@@ -32,8 +32,8 @@ const _nav = [
   },
   {
     component: CNavItem,
-    name: 'Manage Employee',
-    to: 'recordmanagement/manageemployee',
+    name: 'Job Description',
+    to: 'recordmanagement/jobdescription',
     icon: <FontAwesomeIcon icon={faUsers} className="nav-icon" />,
   },
   {
