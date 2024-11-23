@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import {
   CButton,
   CCard,
@@ -36,8 +36,9 @@ const Login = () => {
         login(response.data.user)
         localStorage.setItem('token', response.data.token)
         if (response.data.user.role === 'admin') {
-          navigate('*')
+          navigate('/dashboard')
         } else {
+          navigate('./error/page404')
         }
       }
     } catch (error) {

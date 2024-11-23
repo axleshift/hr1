@@ -1,10 +1,12 @@
-import React, { createContext, useContext, useState } from 'react'
+import React, { createContext, useContext, useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 
 const userContext = createContext()
 
 const authContext = ({ children }) => {
   const [user, setUser] = useState(null)
+
+  useEffect
 
   const login = (user) => {
     setUser(user)
