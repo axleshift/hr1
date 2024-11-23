@@ -1,8 +1,9 @@
-import React, { Children } from 'react'
+import React, { createContext, useContext, useState } from 'react'
+import PropTypes from 'prop-types'
 
 const userContext = createContext()
 
-const authContext = (children) => {
+const authContext = ({ children }) => {
   const [user, setUser] = useState(null)
 
   const login = (user) => {
@@ -17,3 +18,7 @@ const authContext = (children) => {
 
 export const useAuth = () => useContext(userContext)
 export default authContext
+
+authContext.propTypes = {
+  children: PropTypes.node.isRequired,
+}
