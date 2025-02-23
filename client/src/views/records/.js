@@ -34,7 +34,7 @@ const JobDescriptions = () => {
         'Manages the interview process',
       ],
       funFact: 'Fun Fact: The average time to fill a job role is 42 days!',
-      employees: [{ name: 'Jane Doe', avatar: 'https://randomuser.me/api/portraits/women/2.jpg' }],
+      employees: [{ name: '	Jane Doe', avatar: 'https://randomuser.me/api/portraits/women/2.jpg' }],
     },
     {
       title: 'Logistics HR Specialist',
@@ -115,18 +115,18 @@ const JobDescriptions = () => {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        backgroundColor: '#212529',
+        backgroundColor: '#1a1a1a',
         padding: '40px',
-        color: '#f8f9fa',
+        color: '#e0e0e0',
       }}
     >
-      <h1 style={{ fontSize: '36px', fontWeight: 'bold', marginBottom: '30px', color: '#f8f9fa' }}>
+      <h1 style={{ fontSize: '36px', fontWeight: 'bold', marginBottom: '30px', color: '#fff' }}>
         HR Management Job Descriptions
       </h1>
 
       {/* Search bar */}
       <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
-        <FaSearch style={{ marginRight: '10px', color: '#f8f9fa' }} />
+        <FaSearch style={{ marginRight: '10px', color: '#fff' }} />
         <input
           type="text"
           placeholder="Search Job Titles"
@@ -136,9 +136,9 @@ const JobDescriptions = () => {
             padding: '10px',
             fontSize: '16px',
             borderRadius: '4px',
-            border: '1px solid #6f42c1',
-            backgroundColor: '#343a40',
-            color: '#f8f9fa',
+            border: '1px solid #ccc',
+            backgroundColor: '#333',
+            color: '#fff',
           }}
         />
       </div>
@@ -151,9 +151,9 @@ const JobDescriptions = () => {
           marginBottom: '20px',
           fontSize: '16px',
           borderRadius: '4px',
-          border: '1px solid #6f42c1',
-          backgroundColor: '#343a40',
-          color: '#f8f9fa',
+          border: '1px solid #ccc',
+          backgroundColor: '#333',
+          color: '#fff',
         }}
       >
         <option value="All">All Jobs</option>
@@ -180,7 +180,7 @@ const JobDescriptions = () => {
               margin: '20px 0',
               padding: '20px',
               borderRadius: '8px',
-              backgroundColor: '#343a40',
+              backgroundColor: '#2b2b2b',
               boxShadow: '0 2px 10px rgba(0, 0, 0, 0.5)',
               width: '100%',
               cursor: 'pointer',
@@ -192,7 +192,7 @@ const JobDescriptions = () => {
                 fontSize: '24px',
                 fontWeight: 'bold',
                 marginBottom: '10px',
-                color: '#f8f9fa',
+                color: '#fff',
                 display: 'flex',
                 alignItems: 'center',
               }}
@@ -200,13 +200,13 @@ const JobDescriptions = () => {
               {job.icon} <span style={{ marginLeft: '10px' }}>{job.title}</span>
             </h2>
 
-            <h3 style={{ fontSize: '20px', marginBottom: '10px', color: '#adb5bd' }}>
+            <h3 style={{ fontSize: '20px', marginBottom: '10px', color: '#ddd' }}>
               Responsibilities:
             </h3>
 
             <ul style={{ listStyle: 'disc', paddingLeft: '20px' }}>
               {job.bulletPoints.map((bulletPoint, index) => (
-                <li key={index} style={{ fontSize: '16px', color: '#ced4da', marginBottom: '8px' }}>
+                <li key={index} style={{ fontSize: '16px', color: '#ccc', marginBottom: '8px' }}>
                   {bulletPoint}
                 </li>
               ))}
@@ -228,7 +228,7 @@ const JobDescriptions = () => {
             left: '0',
             width: '100%',
             height: '100%',
-            backgroundColor: 'rgba(33, 37, 41, 0.9)',
+            backgroundColor: 'rgba(0, 0, 0, 0.8)',
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
@@ -237,18 +237,18 @@ const JobDescriptions = () => {
         >
           <div
             style={{
-              backgroundColor: '#343a40',
+              backgroundColor: '#333',
               padding: '30px',
               borderRadius: '8px',
               width: '90%',
               maxWidth: '500px',
-              color: '#f8f9fa',
+              color: '#fff',
             }}
           >
             <h2 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '10px' }}>
               {currentJob.title}
             </h2>
-            <h3 style={{ fontSize: '20px', color: '#ffcc00', marginBottom: '10px' }}>
+            <h3 style={{ fontSize: '20px', color: '#ffa500', marginBottom: '10px' }}>
               Assigned Employees:
             </h3>
             <ul style={{ paddingLeft: '20px', listStyleType: 'none', margin: 0 }}>
@@ -278,7 +278,7 @@ const JobDescriptions = () => {
                 padding: '10px 20px',
                 fontSize: '16px',
                 backgroundColor: '#ffa500',
-                color: '#1a1a1a',
+                color: '#333',
                 border: 'none',
                 borderRadius: '4px',
                 cursor: 'pointer',
