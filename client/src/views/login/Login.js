@@ -109,7 +109,7 @@ const Login = () => {
                       For assistance, including account setup or password recovery, please reach out
                       to our administrative department.
                     </p>
-                    <Link to="/contact">
+                    <Link to="https://admin.axleshift.com/">
                       <CButton color="light" className="mt-3" active tabIndex={-1}>
                         Contact us
                       </CButton>

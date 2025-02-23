@@ -9,7 +9,7 @@ import {
   FaSearch,
 } from 'react-icons/fa'
 
-const JobDescriptions = () => {
+const EmployeeInformationManagement = () => {
   const jobDescriptions = [
     {
       title: 'HR Manager',
@@ -86,27 +86,19 @@ const JobDescriptions = () => {
     },
   ]
 
-  const [selectedJob, setSelectedJob] = useState('All')
+  const [selectedEmployee, setSelectedEmployee] = useState(null)
   const [searchTerm, setSearchTerm] = useState('')
-  const [showModal, setShowModal] = useState(false)
-  const [currentJob, setCurrentJob] = useState(null)
 
-  const filteredJobDescriptions =
-    selectedJob === 'All'
-      ? jobDescriptions.filter((job) => job.title.toLowerCase().includes(searchTerm.toLowerCase()))
-      : jobDescriptions.filter(
-          (job) =>
-            job.title === selectedJob && job.title.toLowerCase().includes(searchTerm.toLowerCase()),
-        )
+  const filteredEmployees = jobDescriptions
+    .flatMap((job) => job.employees.map((employee) => ({ ...employee, job })))
+    .filter((employee) => employee.name.toLowerCase().includes(searchTerm.toLowerCase()))
 
-  const openModal = (job) => {
-    setCurrentJob(job)
-    setShowModal(true)
+  const selectEmployee = (employee) => {
+    setSelectedEmployee(employee)
   }
 
-  const closeModal = () => {
-    setCurrentJob(null)
-    setShowModal(false)
+  const clearSelection = () => {
+    setSelectedEmployee(null)
   }
 
   return (
@@ -121,7 +113,7 @@ const JobDescriptions = () => {
       }}
     >
       <h1 style={{ fontSize: '36px', fontWeight: 'bold', marginBottom: '30px', color: '#f8f9fa' }}>
-        HR Management Job Descriptions
+        Employee Information Management
       </h1>
 
       {/* Search bar */}
@@ -129,7 +121,7 @@ const JobDescriptions = () => {
         <FaSearch style={{ marginRight: '10px', color: '#f8f9fa' }} />
         <input
           type="text"
-          placeholder="Search Job Titles"
+          placeholder="Search Employees"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           style={{
@@ -143,27 +135,6 @@ const JobDescriptions = () => {
         />
       </div>
 
-      {/* Dropdown to filter job titles */}
-      <select
-        onChange={(e) => setSelectedJob(e.target.value)}
-        style={{
-          padding: '10px',
-          marginBottom: '20px',
-          fontSize: '16px',
-          borderRadius: '4px',
-          border: '1px solid #6f42c1',
-          backgroundColor: '#343a40',
-          color: '#f8f9fa',
-        }}
-      >
-        <option value="All">All Jobs</option>
-        {jobDescriptions.map((job, index) => (
-          <option key={index} value={job.title}>
-            {job.title}
-          </option>
-        ))}
-      </select>
-
       <div
         style={{
           display: 'flex',
@@ -173,7 +144,7 @@ const JobDescriptions = () => {
           maxWidth: '1000px',
         }}
       >
-        {filteredJobDescriptions.map((job, index) => (
+        {filteredEmployees.map((employee, index) => (
           <div
             key={index}
             style={{
@@ -184,43 +155,33 @@ const JobDescriptions = () => {
               boxShadow: '0 2px 10px rgba(0, 0, 0, 0.5)',
               width: '100%',
               cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
             }}
-            onClick={() => openModal(job)}
+            onClick={() => selectEmployee(employee)}
           >
-            <h2
+            <img
+              src={employee.avatar}
+              alt={`${employee.name} avatar`}
               style={{
-                fontSize: '24px',
-                fontWeight: 'bold',
-                marginBottom: '10px',
-                color: '#f8f9fa',
-                display: 'flex',
-                alignItems: 'center',
+                width: '60px',
+                height: '60px',
+                borderRadius: '50%',
+                marginRight: '20px',
               }}
-            >
-              {job.icon} <span style={{ marginLeft: '10px' }}>{job.title}</span>
-            </h2>
-
-            <h3 style={{ fontSize: '20px', marginBottom: '10px', color: '#adb5bd' }}>
-              Responsibilities:
-            </h3>
-
-            <ul style={{ listStyle: 'disc', paddingLeft: '20px' }}>
-              {job.bulletPoints.map((bulletPoint, index) => (
-                <li key={index} style={{ fontSize: '16px', color: '#ced4da', marginBottom: '8px' }}>
-                  {bulletPoint}
-                </li>
-              ))}
-            </ul>
-
-            <div style={{ marginTop: '10px', color: '#bbb', fontStyle: 'italic' }}>
-              {job.funFact}
+            />
+            <div>
+              <h2 style={{ fontSize: '20px', fontWeight: 'bold', color: '#f8f9fa' }}>
+                {employee.name}
+              </h2>
+              <p style={{ fontSize: '16px', color: '#adb5bd' }}>{employee.job.title}</p>
             </div>
           </div>
         ))}
       </div>
 
-      {/* Modal for showing employees */}
-      {showModal && currentJob && (
+      {/* Detailed view of selected employee */}
+      {selectedEmployee && (
         <div
           style={{
             position: 'fixed',
@@ -246,33 +207,33 @@ const JobDescriptions = () => {
             }}
           >
             <h2 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '10px' }}>
-              {currentJob.title}
+              {selectedEmployee.name}
             </h2>
+            <img
+              src={selectedEmployee.avatar}
+              alt={`${selectedEmployee.name} avatar`}
+              style={{
+                width: '100px',
+                height: '100px',
+                borderRadius: '50%',
+                marginBottom: '15px',
+              }}
+            />
             <h3 style={{ fontSize: '20px', color: '#ffcc00', marginBottom: '10px' }}>
-              Assigned Employees:
+              Job Role: {selectedEmployee.job.title}
             </h3>
-            <ul style={{ paddingLeft: '20px', listStyleType: 'none', margin: 0 }}>
-              {currentJob.employees.map((employee, index) => (
-                <li
-                  key={index}
-                  style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}
-                >
-                  <img
-                    src={employee.avatar}
-                    alt={`${employee.name} avatar`}
-                    style={{
-                      width: '40px',
-                      height: '40px',
-                      borderRadius: '50%',
-                      marginRight: '10px',
-                    }}
-                  />
-                  <span style={{ fontSize: '16px' }}>{employee.name}</span>
+            <h4 style={{ fontSize: '18px', marginBottom: '10px', color: '#adb5bd' }}>
+              Responsibilities:
+            </h4>
+            <ul style={{ listStyleType: 'disc', paddingLeft: '20px', color: '#ced4da' }}>
+              {selectedEmployee.job.bulletPoints.map((point, index) => (
+                <li key={index} style={{ marginBottom: '8px' }}>
+                  {point}
                 </li>
               ))}
             </ul>
             <button
-              onClick={closeModal}
+              onClick={clearSelection}
               style={{
                 marginTop: '20px',
                 padding: '10px 20px',
@@ -293,4 +254,4 @@ const JobDescriptions = () => {
   )
 }
 
-export default JobDescriptions
+export default EmployeeInformationManagement

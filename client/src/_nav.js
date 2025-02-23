@@ -9,7 +9,10 @@ import {
   faGears,
   faUserCheck,
   faUsers,
+  faFolder,
+  faArrowRight,
   faChartColumn,
+  faCircleExclamation,
 } from '@fortawesome/free-solid-svg-icons'
 
 const _nav = [
@@ -22,6 +25,11 @@ const _nav = [
   {
     component: CNavTitle,
     name: 'RECORD MANAGEMENT',
+  },
+  {
+    component: CNavItem,
+    name: 'Employee Information',
+    to: '/recordmanagement/employeeinfo',
     icon: <FontAwesomeIcon icon={faDatabase} className="nav-icon" />,
   },
   {
@@ -32,20 +40,45 @@ const _nav = [
   },
   {
     component: CNavItem,
+    name: 'Document Management',
+    to: 'recordmanagement/document',
+    icon: <FontAwesomeIcon icon={faFolder} className="nav-icon" />,
+  },
+  {
+    component: CNavItem,
     name: 'Job Description',
     to: 'recordmanagement/jobdescription',
     icon: <FontAwesomeIcon icon={faUsers} className="nav-icon" />,
   },
   {
     component: CNavTitle,
-    name: 'testing page',
-    icon: <FontAwesomeIcon icon={faGears} className="nav-icon" />,
+    name: 'Peformance Management',
   },
   {
     component: CNavItem,
-    name: 'login',
-    to: '/logintesting',
-    icon: <FontAwesomeIcon icon={faCalendarDays} className="nav-icon" />,
+    name: 'Performance',
+    to: '/performanemanagement/',
+    icon: <FontAwesomeIcon icon={faChartColumn} className="nav-icon" />,
+  },
+  {
+    component: CNavTitle,
+    name: 'Leave Application',
+  },
+  {
+    component: CNavItem,
+    name: 'Leave Request',
+    to: '/request/leaverequest',
+    icon: <FontAwesomeIcon icon={faArrowRight} className="nav-icon" />,
+  },
+  {
+    component: CNavTitle,
+    name: 'Off Boarding Management',
+  },
+  {
+    component: CNavItem,
+    name: 'Off Boarding Request',
+    to: '/request/offboarding',
+    icon: <FontAwesomeIcon icon={faCircleExclamation} className="nav-icon" />,
   },
 ]
 
