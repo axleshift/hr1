@@ -10,6 +10,7 @@ const profile = React.lazy(() => import('./views/dashboard/user'))
 const info = React.lazy(() => import('./views/records/info'))
 const hr_analytics = React.lazy(() => import('./views/records/hr_analytics'))
 const RoleBasedDashboard = React.lazy(() => import('./views/dashboard/RoleBasedDashboard'))
+const pj = React.lazy(() => import('./views/endpage/postjob'))
 
 const routes = [
   { path: '/', exact: true, name: 'Home' },
@@ -53,6 +54,11 @@ const routes = [
     path: '/record/hranalytics',
     name: 'HR Analytics',
     element: hr_analytics,
+  },
+  {
+    path: '/postjob',
+    name: 'Post job Posting',
+    element: pj,
   },
 ]
 
