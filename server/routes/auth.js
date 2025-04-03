@@ -1,9 +1,18 @@
-import express from 'express';
-import { login } from '../controller/authController.js';
+// routes/auth.js
 
-const router = express.Router();
+import express from 'express'
+import { login, verifyUser } from '../controller/authController.js'
+import { authMiddleware } from '../middleware/authMiddleware.js'
 
-// Define your routes here
-router.post('/login', login);
 
-export default router;
+const router = express.Router()
+
+// Login route
+router.post('/login', login)
+
+// ✅ Token verification route (uses middleware to decode the JWT)
+router.get('/verify', authMiddleware, verifyUser)
+
+export default router
+
+ 

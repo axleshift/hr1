@@ -1,24 +1,10 @@
 import React, { useState } from 'react'
-import {
-  CButton,
-  CCard,
-  CCardBody,
-  CCardGroup,
-  CCol,
-  CContainer,
-  CForm,
-  CFormInput,
-  CInputGroup,
-  CInputGroupText,
-  CRow,
-  CAlert,
-} from '@coreui/react'
 
 const LeaveManagement = () => {
-  const [leaveRequests, setLeaveRequests] = useState([
+  const [leaveRequests] = useState([
     {
       id: 1,
-      employeeName: 'John Luis G. lu',
+      employeeName: 'John Luis G. Lu', // Fixed capitalization
       employeeId: '21012265',
       leaveType: 'Sick Leave',
       startDate: '2023-11-20',
@@ -44,20 +30,6 @@ const LeaveManagement = () => {
       status: 'Denied',
     },
   ])
-
-  const handleApprove = (id) => {
-    const updatedRequests = leaveRequests.map((request) =>
-      request.id === id ? { ...request, status: 'Approved' } : request,
-    )
-    setLeaveRequests(updatedRequests)
-  }
-
-  const handleDeny = (id) => {
-    const updatedRequests = leaveRequests.map((request) =>
-      request.id === id ? { ...request, status: 'Denied' } : request,
-    )
-    setLeaveRequests(updatedRequests)
-  }
 
   return (
     <div
@@ -121,14 +93,9 @@ const LeaveManagement = () => {
               </td>
               <td style={{ padding: '10px', textAlign: 'center' }}>
                 {request.status === 'Pending' && (
-                  <>
-                    <CButton color="success" onClick={() => handleApprove(request.id)}>
-                      Approve
-                    </CButton>
-                    <CButton color="success" onClick={() => handleDeny(request.id)}>
-                      Deny
-                    </CButton>
-                  </>
+                  <span style={{ color: '#6f42c1', fontWeight: 'bold' }}>
+                    Waiting for Approval from Administrator
+                  </span>
                 )}
               </td>
             </tr>

@@ -64,7 +64,7 @@ const Dashboard = () => {
         data: [totalEmployees],
         backgroundColor: ['#FFA726'],
         hoverBackgroundColor: ['#FB8C00'],
-        borderWidth: 0, // Removed border
+        borderWidth: 0,
       },
     ],
   }
@@ -99,7 +99,7 @@ const Dashboard = () => {
         data: [presentCount, absentCount],
         backgroundColor: ['#36A2EB', '#FF6384'],
         hoverBackgroundColor: ['#36A2EB', '#FF6384'],
-        borderWidth: 0, // Removed border
+        borderWidth: 0,
       },
     ],
   }
@@ -114,7 +114,7 @@ const Dashboard = () => {
         ],
         backgroundColor: ['#4CAF50', '#FF9800'],
         hoverBackgroundColor: ['#4CAF50', '#FF9800'],
-        borderWidth: 0, // Removed border
+        borderWidth: 0,
       },
     ],
   }
@@ -124,117 +124,123 @@ const Dashboard = () => {
     plugins: {
       legend: {
         labels: {
-          color: '#fff', // White text for legend
+          color: '#333',
         },
       },
       tooltip: {
-        bodyColor: '#fff', // White text for tooltips
-        titleColor: '#fff',
+        bodyColor: '#333',
+        titleColor: '#333',
+        backgroundColor: 'rgba(0, 0, 0, 0.7)',
       },
+    },
+    layout: {
+      padding: 0,
+      backgroundColor: 'transparent',
     },
     scales: {
       x: {
         ticks: {
-          color: '#fff', // White text for x-axis
+          color: '#333',
         },
       },
       y: {
         ticks: {
-          color: '#fff', // White text for y-axis
+          color: '#333',
         },
       },
     },
   }
 
   return (
-    <div
-      style={{
-        fontFamily: 'Arial, sans-serif',
-        fontSize: '16px',
-        lineHeight: '1.5',
-        padding: '20px',
-        backgroundColor: 'transparent', // Transparent background
-        color: '#fff',
-      }}
-    >
-      <h2
+    <div style={{ height: '100vh', backgroundColor: '#F4F5FA', padding: '20px', color: '#333' }}>
+      {/* Top Navigation */}
+      <div
         style={{
-          fontSize: '28px',
-          fontWeight: 'bold',
-          marginBottom: '30px',
-          textAlign: 'center',
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          marginBottom: '20px',
+          backgroundColor: '#6C63FF',
+          padding: '10px 20px',
+          borderRadius: '10px',
+          color: '#fff',
         }}
       >
-        Dashboard
-      </h2>
+        <h2 style={{ margin: 0 }}>Dashboard</h2>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+          <span>Welcome, John</span>
+          <img src="https://via.placeholder.com/40" alt="Profile" style={{ borderRadius: '50%' }} />
+        </div>
+      </div>
 
-      <div style={{ display: 'flex', justifyContent: 'space-around', marginBottom: '30px' }}>
+      {/* Metrics Section */}
+      <div style={{ display: 'flex', gap: '20px', marginBottom: '20px' }}>
         <div
           style={{
-            textAlign: 'center',
-            backgroundColor: 'rgba(255, 255, 255, 0.2)',
+            flex: 1,
+            backgroundColor: '#fff',
             padding: '20px',
             borderRadius: '10px',
             boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-            width: '250px',
           }}
         >
           <h3>Total Employees</h3>
-          <Doughnut data={totalEmployeesData} options={chartOptions} />
-          <p style={{ fontSize: '20px', fontWeight: 'bold', margin: '10px 0' }}>
-            {totalEmployees} Employees
-          </p>
+          <p style={{ fontSize: '24px', fontWeight: 'bold', color: '#6C63FF' }}>{totalEmployees}</p>
         </div>
-
         <div
           style={{
-            textAlign: 'center',
-            backgroundColor: 'rgba(255, 255, 255, 0.2)',
+            flex: 1,
+            backgroundColor: '#fff',
             padding: '20px',
             borderRadius: '10px',
             boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-            width: '250px',
           }}
         >
-          <h3>Employee Attendance</h3>
-          <Doughnut data={presentData} options={chartOptions} />
-          <p style={{ fontSize: '20px', fontWeight: 'bold', margin: '10px 0' }}>
-            {presentCount} Present / {absentCount} Absent
-          </p>
+          <h3>Present Employees</h3>
+          <p style={{ fontSize: '24px', fontWeight: 'bold', color: '#6C63FF' }}>{presentCount}</p>
         </div>
-
         <div
           style={{
-            textAlign: 'center',
-            backgroundColor: 'rgba(255, 255, 255, 0.2)',
+            flex: 1,
+            backgroundColor: '#fff',
             padding: '20px',
             borderRadius: '10px',
             boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-            width: '250px',
           }}
         >
           <h3>Leave Requests</h3>
-          <Doughnut data={leaveRequestData} options={chartOptions} />
-          <p style={{ fontSize: '20px', fontWeight: 'bold', margin: '10px 0' }}>
-            {leaveRequests.filter((r) => r.status === 'Approved').length} Approved /{' '}
-            {leaveRequests.filter((r) => r.status === 'Pending').length} Pending
+          <p style={{ fontSize: '24px', fontWeight: 'bold', color: '#6C63FF' }}>
+            {leaveRequests.filter((r) => r.status === 'Approved').length} Approved
           </p>
         </div>
       </div>
 
-      <div
-        style={{
-          maxWidth: '600px',
-          height: '350px',
-          margin: '30px auto',
-          backgroundColor: 'rgba(255, 255, 255, 0.2)',
-          padding: '20px',
-          borderRadius: '10px',
-          boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-        }}
-      >
-        <h3 style={{ textAlign: 'center', marginBottom: '20px' }}>Employee Performance Overview</h3>
-        <Bar data={analyticsData} options={chartOptions} />
+      {/* Charts Section */}
+      <div style={{ display: 'flex', gap: '20px' }}>
+        <div
+          style={{
+            flex: 2,
+            backgroundColor: '#fff',
+            padding: '20px',
+            borderRadius: '10px',
+            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+          }}
+        >
+          <h3>Employee Performance Overview</h3>
+          <Bar data={analyticsData} options={chartOptions} />
+        </div>
+        <div
+          style={{
+            flex: 1,
+            backgroundColor: '#fff',
+            padding: '20px',
+            borderRadius: '10px',
+            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+          }}
+        >
+          <h3>Attendance</h3>
+          <Doughnut data={presentData} options={chartOptions} />
+        </div>
       </div>
     </div>
   )
