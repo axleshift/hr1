@@ -25,28 +25,46 @@ const Login = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState(null)
+  const [loading, setLoading] = useState(false)
+
   const { login } = useAuth()
   const navigate = useNavigate()
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    setLoading(true)
+    setError(null)
+
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/login', { email, password })
+      const response = await axios.post('http://localhost:5000/api/auth/login', {
+        email,
+        password,
+      })
+
+      console.log('Login response:', response.data)
+
       if (response.data.success) {
-        login(response.data.user)
-        localStorage.setItem('token', response.data.token)
-        if (response.data.user.role === 'admin') {
-          navigate('/dashboard')
-        } else {
-          navigate('./error/page404')
-        }
+        const { user, token } = response.data
+
+        // Store user and token
+        localStorage.setItem('token', token)
+        localStorage.setItem('user', JSON.stringify(user))
+        login(user) // Context login
+
+        // Navigate based on role
+        navigate('/dashboard')
+      } else {
+        setError('Invalid credentials. Please try again.')
       }
     } catch (error) {
-      if (error.response && error.response.data.error) {
+      console.error('Login error:', error)
+      if (error.response?.data?.error) {
         setError(error.response.data.error)
       } else {
-        setError('Server Error')
+        setError('Server error. Please try again later.')
       }
+    } finally {
+      setLoading(false)
     }
   }
 
@@ -60,25 +78,30 @@ const Login = () => {
                 <CCardBody>
                   <CForm onSubmit={handleSubmit}>
                     <h1>Login</h1>
+
                     {error && (
                       <CAlert color="danger">
-                        <FontAwesomeIcon icon={faXmarkCircle} className="me-3" />
+                        <FontAwesomeIcon icon={faXmarkCircle} className="me-2" />
                         {error}
                       </CAlert>
                     )}
+
                     <p className="text-body-secondary">Sign In to your account</p>
+
                     <CInputGroup className="mb-3">
                       <CInputGroupText>
                         <CIcon icon={cilUser} />
                       </CInputGroupText>
                       <CFormInput
                         type="email"
-                        placeholder="Email"
+                        placeholder="Email or ID Number"
                         autoComplete="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
+                        required
                       />
                     </CInputGroup>
+
                     <CInputGroup className="mb-4">
                       <CInputGroupText>
                         <CIcon icon={cilLockLocked} />
@@ -89,18 +112,21 @@ const Login = () => {
                         autoComplete="current-password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
+                        required
                       />
                     </CInputGroup>
+
                     <CRow>
                       <CCol xs={6}>
-                        <CButton type="submit" color="primary" className="px-4">
-                          Login
+                        <CButton type="submit" color="primary" className="px-4" disabled={loading}>
+                          {loading ? 'Logging in...' : 'Login'}
                         </CButton>
                       </CCol>
                     </CRow>
                   </CForm>
                 </CCardBody>
               </CCard>
+
               <CCard className="text-white bg-primary py-5" style={{ width: '44%' }}>
                 <CCardBody className="text-center">
                   <div>

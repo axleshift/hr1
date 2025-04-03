@@ -10,14 +10,19 @@ import {
   CSidebarToggler,
   CImage,
 } from '@coreui/react'
-import CIcon from '@coreui/icons-react'
 import { AppSidebarNav } from './AppSidebarNav'
-import navigation from '../_nav'
+import getNavItems from '../_nav' // ✅ Use the function
 
 const AppSidebar = () => {
   const dispatch = useDispatch()
   const unfoldable = useSelector((state) => state.sidebarUnfoldable)
   const sidebarShow = useSelector((state) => state.sidebarShow)
+
+  // ✅ Get user role
+  const user = JSON.parse(localStorage.getItem('user'))
+  const role = user?.role || 'employee' // fallback to employee
+
+  const navigation = getNavItems(role) // ✅ Generate role-based nav
 
   return (
     <CSidebar
@@ -47,7 +52,7 @@ const AppSidebar = () => {
           onClick={() => dispatch({ type: 'set', sidebarShow: false })}
         />
       </CSidebarHeader>
-      <AppSidebarNav items={navigation} />
+      <AppSidebarNav items={navigation} /> {/* ✅ Fixed */}
       <CSidebarFooter className="border-top d-none d-lg-flex">
         <CSidebarToggler
           onClick={() => dispatch({ type: 'set', sidebarUnfoldable: !unfoldable })}
