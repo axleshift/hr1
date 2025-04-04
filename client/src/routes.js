@@ -1,16 +1,17 @@
 import { element } from 'prop-types'
 import React from 'react'
 
-const TimeandAttendance = React.lazy(() => import('./views/records/time'))
+const RoleBaseattendance = React.lazy(() => import('./views/attendance/RoleBaseattendance'))
 const DocumentManagement = React.lazy(() => import('./views/records/docu'))
 const req = React.lazy(() => import('./views/records/leave'))
 const perfor = React.lazy(() => import('./views/records/perfo'))
 const off = React.lazy(() => import('./views/records/off'))
-const profile = React.lazy(() => import('./views/dashboard/user'))
+const profile = React.lazy(() => import('./views/endpage/user'))
 const info = React.lazy(() => import('./views/records/info'))
 const hr_analytics = React.lazy(() => import('./views/records/hr_analytics'))
 const RoleBasedDashboard = React.lazy(() => import('./views/dashboard/RoleBasedDashboard'))
 const pj = React.lazy(() => import('./views/endpage/postjob'))
+const hw = React.lazy(() => import('./views/endpage/newhire'))
 
 const routes = [
   { path: '/', exact: true, name: 'Home' },
@@ -18,7 +19,7 @@ const routes = [
   {
     path: '/recordmanagement/timeandattendance',
     name: 'Time and Attendance',
-    element: TimeandAttendance,
+    element: RoleBaseattendance,
   },
   {
     path: '/recordmanagement/document',
@@ -59,6 +60,11 @@ const routes = [
     path: '/postjob',
     name: 'Post job Posting',
     element: pj,
+  },
+  {
+    path: '/newhired',
+    name: 'New Hire',
+    element: hw,
   },
 ]
 

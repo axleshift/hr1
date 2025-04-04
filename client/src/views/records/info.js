@@ -1,257 +1,200 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
 import {
-  FaUserTie,
-  FaUserPlus,
-  FaMoneyCheckAlt,
-  FaHandshake,
-  FaChartLine,
-  FaUsers,
-  FaSearch,
-} from 'react-icons/fa'
+  CCard,
+  CCardBody,
+  CCardHeader,
+  CFormInput,
+  CFormSelect,
+  CTable,
+  CTableHead,
+  CTableBody,
+  CTableRow,
+  CTableHeaderCell,
+  CTableDataCell,
+  CModal,
+  CModalHeader,
+  CModalTitle,
+  CModalBody,
+  CModalFooter,
+  CButton,
+  CRow,
+  CCol,
+  CAvatar,
+  CBadge,
+} from '@coreui/react'
 
-const EmployeeInformationManagement = () => {
-  const jobDescriptions = [
-    {
-      title: 'HR Manager',
-      icon: <FaUserTie />,
-      bulletPoints: [
-        'Oversees overall HR operations',
-        'Ensures staffing needs are met',
-        'Manages employee relations and development',
-        'Enforces company policies and standards',
-      ],
-      funFact:
-        'Did you know? HR Managers spend about 14% of their time dealing with conflict resolution!',
-      employees: [{ name: 'Vincent Go', avatar: 'https://randomuser.me/api/portraits/men/1.jpg' }],
-    },
-    {
-      title: 'Recruitment Specialist',
-      icon: <FaUserPlus />,
-      bulletPoints: [
-        'Handles recruitment of drivers, warehouse staff, and admin roles',
-        'Manages job postings, interviews, and onboarding processes',
-        'Ensures the company hires qualified candidates',
-        'Manages the interview process',
-      ],
-      funFact: 'Fun Fact: The average time to fill a job role is 42 days!',
-      employees: [{ name: 'Jane Doe', avatar: 'https://randomuser.me/api/portraits/women/2.jpg' }],
-    },
-    {
-      title: 'Logistics HR Specialist',
-      icon: <FaHandshake />,
-      bulletPoints: [
-        'Oversees recruitment for logistics roles such as drivers and dispatchers',
-        'Collaborates with department heads for seasonal staffing',
-        'Develops HR policies for logistics and transportation',
-      ],
-      funFact: 'Logistics hiring typically spikes by 20% during the holiday season!',
-      employees: [{ name: 'John Lennon', avatar: 'https://randomuser.me/api/portraits/men/3.jpg' }],
-    },
-    {
-      title: 'Fleet Safety and Compliance Manager',
-      icon: <FaChartLine />,
-      bulletPoints: [
-        'Ensures compliance with transportation laws and regulations',
-        'Implements driver safety training programs',
-        'Manages accident investigations and reporting',
-      ],
-      funFact: 'Fleet safety programs can reduce incidents by up to 25%!',
-      employees: [{ name: 'Mr.Bean', avatar: 'https://randomuser.me/api/portraits/men/4.jpg' }],
-    },
-    {
-      title: 'Warehouse Employee Engagement Coordinator',
-      icon: <FaUsers />,
-      bulletPoints: [
-        'Improves warehouse morale and employee engagement',
-        'Organizes recognition programs for staff',
-        'Conducts feedback sessions to improve warehouse operations',
-      ],
-      funFact: 'Engaged employees increase warehouse efficiency by 30%.',
-      employees: [
-        { name: 'Claire Grady', avatar: 'https://randomuser.me/api/portraits/women/5.jpg' },
-      ],
-    },
-    {
-      title: 'Payroll Specialist for Cargo Operations',
-      icon: <FaMoneyCheckAlt />,
-      bulletPoints: [
-        'Processes payroll and benefits for logistics staff',
-        'Ensures accurate payment tracking for contracted drivers',
-        'Handles incentives for long-haul trips and extended hours',
-      ],
-      funFact: 'Automated payroll systems can reduce processing time by 40%.',
-      employees: [
-        { name: 'Linda Martinez', avatar: 'https://randomuser.me/api/portraits/women/6.jpg' },
-      ],
-    },
-  ]
-
+const EmployeeDirectory = () => {
+  const [employees, setEmployees] = useState([])
+  const [searchId, setSearchId] = useState('')
+  const [selectedDept, setSelectedDept] = useState('All')
   const [selectedEmployee, setSelectedEmployee] = useState(null)
-  const [searchTerm, setSearchTerm] = useState('')
+  const [visible, setVisible] = useState(false)
 
-  const filteredEmployees = jobDescriptions
-    .flatMap((job) => job.employees.map((employee) => ({ ...employee, job })))
-    .filter((employee) => employee.name.toLowerCase().includes(searchTerm.toLowerCase()))
+  useEffect(() => {
+    const fetchEmployees = async () => {
+      try {
+        const res = await axios.get('http://localhost:5000/api/employees')
+        setEmployees(res.data)
+      } catch (err) {
+        console.error('Failed to fetch employees:', err)
+      }
+    }
 
-  const selectEmployee = (employee) => {
-    setSelectedEmployee(employee)
-  }
+    fetchEmployees()
+  }, [])
 
-  const clearSelection = () => {
-    setSelectedEmployee(null)
+  const filteredEmployees = employees.filter((emp) => {
+    const matchId = emp.id?.toLowerCase().includes(searchId.toLowerCase())
+    const matchDept = selectedDept === 'All' || emp.department === selectedDept
+    return matchId && matchDept
+  })
+
+  const handleRowClick = (emp) => {
+    setSelectedEmployee(emp)
+    setVisible(true)
   }
 
   return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        backgroundColor: '#212529',
-        padding: '40px',
-        color: '#f8f9fa',
-      }}
-    >
-      <h1 style={{ fontSize: '36px', fontWeight: 'bold', marginBottom: '30px', color: '#f8f9fa' }}>
-        Employee Information Management
-      </h1>
+    <>
+      <CCard>
+        <CCardHeader className="fw-bold">👥 Employee Directory</CCardHeader>
+        <CCardBody>
+          <CRow className="mb-4">
+            <CCol md={6}>
+              <CFormInput
+                placeholder="🔍 Search by Employee ID"
+                value={searchId}
+                onChange={(e) => setSearchId(e.target.value)}
+              />
+            </CCol>
+            <CCol md={6}>
+              <CFormSelect value={selectedDept} onChange={(e) => setSelectedDept(e.target.value)}>
+                <option value="All">All Departments</option>
+                <option value="Logistics">Logistics</option>
+                <option value="IT">IT</option>
+                <option value="HR">HR</option>
+              </CFormSelect>
+            </CCol>
+          </CRow>
 
-      {/* Search bar */}
-      <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
-        <FaSearch style={{ marginRight: '10px', color: '#f8f9fa' }} />
-        <input
-          type="text"
-          placeholder="Search Employees"
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          style={{
-            padding: '10px',
-            fontSize: '16px',
-            borderRadius: '4px',
-            border: '1px solid #6f42c1',
-            backgroundColor: '#343a40',
-            color: '#f8f9fa',
-          }}
-        />
-      </div>
-
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'flex-start',
-          width: '100%',
-          maxWidth: '1000px',
-        }}
-      >
-        {filteredEmployees.map((employee, index) => (
-          <div
-            key={index}
-            style={{
-              margin: '20px 0',
-              padding: '20px',
-              borderRadius: '8px',
-              backgroundColor: '#343a40',
-              boxShadow: '0 2px 10px rgba(0, 0, 0, 0.5)',
-              width: '100%',
-              cursor: 'pointer',
-              display: 'flex',
-              alignItems: 'center',
-            }}
-            onClick={() => selectEmployee(employee)}
-          >
-            <img
-              src={employee.avatar}
-              alt={`${employee.name} avatar`}
-              style={{
-                width: '60px',
-                height: '60px',
-                borderRadius: '50%',
-                marginRight: '20px',
-              }}
-            />
-            <div>
-              <h2 style={{ fontSize: '20px', fontWeight: 'bold', color: '#f8f9fa' }}>
-                {employee.name}
-              </h2>
-              <p style={{ fontSize: '16px', color: '#adb5bd' }}>{employee.job.title}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* Detailed view of selected employee */}
-      {selectedEmployee && (
-        <div
-          style={{
-            position: 'fixed',
-            top: '0',
-            left: '0',
-            width: '100%',
-            height: '100%',
-            backgroundColor: 'rgba(33, 37, 41, 0.9)',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            zIndex: '1000',
-          }}
-        >
-          <div
-            style={{
-              backgroundColor: '#343a40',
-              padding: '30px',
-              borderRadius: '8px',
-              width: '90%',
-              maxWidth: '500px',
-              color: '#f8f9fa',
-            }}
-          >
-            <h2 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '10px' }}>
-              {selectedEmployee.name}
-            </h2>
-            <img
-              src={selectedEmployee.avatar}
-              alt={`${selectedEmployee.name} avatar`}
-              style={{
-                width: '100px',
-                height: '100px',
-                borderRadius: '50%',
-                marginBottom: '15px',
-              }}
-            />
-            <h3 style={{ fontSize: '20px', color: '#ffcc00', marginBottom: '10px' }}>
-              Job Role: {selectedEmployee.job.title}
-            </h3>
-            <h4 style={{ fontSize: '18px', marginBottom: '10px', color: '#adb5bd' }}>
-              Responsibilities:
-            </h4>
-            <ul style={{ listStyleType: 'disc', paddingLeft: '20px', color: '#ced4da' }}>
-              {selectedEmployee.job.bulletPoints.map((point, index) => (
-                <li key={index} style={{ marginBottom: '8px' }}>
-                  {point}
-                </li>
+          <CTable striped hover responsive align="middle">
+            <CTableHead>
+              <CTableRow>
+                <CTableHeaderCell>Employee ID</CTableHeaderCell>
+                <CTableHeaderCell>Profile</CTableHeaderCell>
+                <CTableHeaderCell>Name</CTableHeaderCell>
+                <CTableHeaderCell>Department</CTableHeaderCell>
+                <CTableHeaderCell>Role</CTableHeaderCell>
+                <CTableHeaderCell>Email</CTableHeaderCell>
+              </CTableRow>
+            </CTableHead>
+            <CTableBody>
+              {filteredEmployees.map((emp) => (
+                <CTableRow
+                  key={emp._id}
+                  onClick={() => handleRowClick(emp)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  <CTableDataCell>{emp.id}</CTableDataCell>
+                  <CTableDataCell>
+                    <CAvatar
+                      src={
+                        emp.photo?.startsWith('/uploads')
+                          ? `http://localhost:5000${emp.photo}`
+                          : emp.photo
+                      }
+                      size="lg"
+                      shape="rounded"
+                      textColor="white"
+                      color="info"
+                    >
+                      {!emp.photo && emp.name?.charAt(0)}
+                    </CAvatar>
+                  </CTableDataCell>
+                  <CTableDataCell>{emp.name}</CTableDataCell>
+                  <CTableDataCell>{emp.department}</CTableDataCell>
+                  <CTableDataCell>{emp.role}</CTableDataCell>
+                  <CTableDataCell>{emp.email}</CTableDataCell>
+                </CTableRow>
               ))}
-            </ul>
-            <button
-              onClick={clearSelection}
-              style={{
-                marginTop: '20px',
-                padding: '10px 20px',
-                fontSize: '16px',
-                backgroundColor: '#ffa500',
-                color: '#1a1a1a',
-                border: 'none',
-                borderRadius: '4px',
-                cursor: 'pointer',
-              }}
-            >
-              Close
-            </button>
-          </div>
-        </div>
-      )}
-    </div>
+              {filteredEmployees.length === 0 && (
+                <CTableRow>
+                  <CTableDataCell colSpan="6" className="text-center text-muted">
+                    No employees found.
+                  </CTableDataCell>
+                </CTableRow>
+              )}
+            </CTableBody>
+          </CTable>
+        </CCardBody>
+      </CCard>
+
+      {/* Modal */}
+      <CModal alignment="center" visible={visible} onClose={() => setVisible(false)} size="lg">
+        <CModalHeader>
+          <CModalTitle>Employee Details</CModalTitle>
+        </CModalHeader>
+        <CModalBody>
+          {selectedEmployee && (
+            <>
+              <div className="text-center mb-4">
+                <CAvatar
+                  src={
+                    selectedEmployee.photo?.startsWith('/uploads')
+                      ? `http://localhost:5000${selectedEmployee.photo}`
+                      : selectedEmployee.photo
+                  }
+                  size="xxl"
+                  shape="circle"
+                  className="mb-2"
+                />
+                <h5 className="mt-2">{selectedEmployee.name}</h5>
+                <CBadge color={selectedEmployee.status === 'Active' ? 'success' : 'secondary'}>
+                  {selectedEmployee.status}
+                </CBadge>
+              </div>
+
+              <CRow className="mb-3">
+                <CCol md={6}>
+                  <strong>Employee ID:</strong> {selectedEmployee.id}
+                </CCol>
+                <CCol md={6}>
+                  <strong>Department:</strong> {selectedEmployee.department}
+                </CCol>
+              </CRow>
+              <CRow className="mb-3">
+                <CCol md={6}>
+                  <strong>Role:</strong> {selectedEmployee.role}
+                </CCol>
+                <CCol md={6}>
+                  <strong>Email:</strong> {selectedEmployee.email}
+                </CCol>
+              </CRow>
+              <CRow className="mb-3">
+                <CCol md={6}>
+                  <strong>Phone:</strong> {selectedEmployee.phone}
+                </CCol>
+                <CCol md={6}>
+                  <strong>Address:</strong> {selectedEmployee.address}
+                </CCol>
+              </CRow>
+              <CRow>
+                <CCol md={6}>
+                  <strong>Date Hired:</strong> {selectedEmployee.dateHired}
+                </CCol>
+              </CRow>
+            </>
+          )}
+        </CModalBody>
+        <CModalFooter>
+          <CButton color="secondary" onClick={() => setVisible(false)}>
+            Close
+          </CButton>
+        </CModalFooter>
+      </CModal>
+    </>
   )
 }
 
-export default EmployeeInformationManagement
+export default EmployeeDirectory
