@@ -10,7 +10,7 @@ import {
   faChartColumn,
   faCircleExclamation,
   faSignsPost,
-  faUserTie
+  faUserTie,
 } from '@fortawesome/free-solid-svg-icons'
 
 // Function that returns nav items based on role
@@ -37,8 +37,8 @@ const getNavItems = (role) => {
     },
     {
       component: CNavItem,
-      name: 'NeW Hired',
-      to: '/postjob',
+      name: 'New Hired',
+      to: '/newhired',
       icon: <FontAwesomeIcon icon={faUserTie} className="nav-icon" />,
     },
     {
@@ -82,6 +82,16 @@ const getNavItems = (role) => {
   ]
 
   const employeeNav = [
+    {
+      component: CNavTitle,
+      name: 'My Records',
+    },
+    {
+      component: CNavItem,
+      name: 'Time and Attendance',
+      to: 'recordmanagement/timeandattendance',
+      icon: <FontAwesomeIcon icon={faCalendarDays} className="nav-icon" />,
+    },
     {
       component: CNavTitle,
       name: 'Leave Application',
