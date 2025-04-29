@@ -74,7 +74,7 @@ const NewHireDashboard = () => {
         <CCardHeader className="fw-bold">📥 New Hire Dashboard</CCardHeader>
         <CCardBody>
           {Object.keys(grouped).length === 0 ? (
-            <p className="text-muted">No new hires have been received yet.</p>
+            <p className="text-muted">No new hires with status &quot;New Hire".</p>
           ) : (
             <CAccordion alwaysOpen>
               {Object.entries(grouped).map(([dept, list], idx) => (
