@@ -1,6 +1,5 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-
 import {
   CCloseButton,
   CSidebar,
@@ -11,18 +10,37 @@ import {
   CImage,
 } from '@coreui/react'
 import { AppSidebarNav } from './AppSidebarNav'
-import getNavItems from '../_nav' // ✅ Use the function
+import getNavItems from '../_nav'
+import axios from 'axios'
 
 const AppSidebar = () => {
   const dispatch = useDispatch()
   const unfoldable = useSelector((state) => state.sidebarUnfoldable)
   const sidebarShow = useSelector((state) => state.sidebarShow)
 
-  // ✅ Get user role
   const user = JSON.parse(localStorage.getItem('user'))
-  const role = user?.role || 'employee' // fallback to employee
+  const role = user?.role || 'employee'
 
-  const navigation = getNavItems(role) // ✅ Generate role-based nav
+  const [newHireCount, setNewHireCount] = useState(0)
+
+  // 🔁 Automatically fetch new hire count every 10 seconds
+  useEffect(() => {
+    const fetchCount = async () => {
+      try {
+        const response = await axios.get('https://backend-hr1.axleshift.com/api/newhires/count')
+        setNewHireCount(response.data.count || 0)
+      } catch (err) {
+        console.error('Error fetching new hire count:', err)
+        setNewHireCount(0)
+      }
+    }
+
+    fetchCount()
+    const interval = setInterval(fetchCount, 10000)
+    return () => clearInterval(interval)
+  }, [])
+
+  const navigation = getNavItems(role, newHireCount)
 
   return (
     <CSidebar
@@ -52,7 +70,9 @@ const AppSidebar = () => {
           onClick={() => dispatch({ type: 'set', sidebarShow: false })}
         />
       </CSidebarHeader>
-      <AppSidebarNav items={navigation} /> {/* ✅ Fixed */}
+
+      <AppSidebarNav items={navigation} />
+
       <CSidebarFooter className="border-top d-none d-lg-flex">
         <CSidebarToggler
           onClick={() => dispatch({ type: 'set', sidebarUnfoldable: !unfoldable })}

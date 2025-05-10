@@ -34,7 +34,7 @@ const EmployeeDirectory = () => {
   useEffect(() => {
     const fetchEmployees = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/employees')
+        const res = await axios.get('https://backend-hr1.axleshift.com/api/employees')
         setEmployees(res.data)
       } catch (err) {
         console.error('Failed to fetch employees:', err)
@@ -45,7 +45,7 @@ const EmployeeDirectory = () => {
   }, [])
 
   const filteredEmployees = employees.filter((emp) => {
-    const matchId = emp.id?.toLowerCase().includes(searchId.toLowerCase())
+    const matchId = emp.employeeId?.toLowerCase().includes(searchId.toLowerCase())
     const matchDept = selectedDept === 'All' || emp.department === selectedDept
     return matchId && matchDept
   })
@@ -72,8 +72,15 @@ const EmployeeDirectory = () => {
               <CFormSelect value={selectedDept} onChange={(e) => setSelectedDept(e.target.value)}>
                 <option value="All">All Departments</option>
                 <option value="Logistics">Logistics</option>
-                <option value="IT">IT</option>
-                <option value="HR">HR</option>
+                <option value="Warehouse">Warehouse</option>
+                <option value="Operations">Operations</option>
+                <option value="Freight Forwarding">Freight Forwarding</option>
+                <option value="Customs Clearance">Customs Clearance</option>
+                <option value="Accounting">Accounting</option>
+                <option value="Human Resource">Human Resource</option>
+                <option value="Customer Service">Customer Service</option>
+                <option value="IT Department">IT Department</option>
+                <option value="Dispatch">Dispatch</option>
               </CFormSelect>
             </CCol>
           </CRow>
@@ -96,12 +103,12 @@ const EmployeeDirectory = () => {
                   onClick={() => handleRowClick(emp)}
                   style={{ cursor: 'pointer' }}
                 >
-                  <CTableDataCell>{emp.id}</CTableDataCell>
+                  <CTableDataCell>{emp.employeeId}</CTableDataCell>
                   <CTableDataCell>
                     <CAvatar
                       src={
                         emp.photo?.startsWith('/uploads')
-                          ? `http://localhost:5000${emp.photo}`
+                          ? `https://backend-hr1.axleshift.com${emp.photo}`
                           : emp.photo
                       }
                       size="lg"
@@ -109,12 +116,12 @@ const EmployeeDirectory = () => {
                       textColor="white"
                       color="info"
                     >
-                      {!emp.photo && emp.name?.charAt(0)}
+                      {!emp.photo && emp.firstName?.charAt(0)}
                     </CAvatar>
                   </CTableDataCell>
-                  <CTableDataCell>{emp.name}</CTableDataCell>
+                  <CTableDataCell>{`${emp.firstName} ${emp.lastName}`}</CTableDataCell>
                   <CTableDataCell>{emp.department}</CTableDataCell>
-                  <CTableDataCell>{emp.role}</CTableDataCell>
+                  <CTableDataCell>{emp.position}</CTableDataCell>
                   <CTableDataCell>{emp.email}</CTableDataCell>
                 </CTableRow>
               ))}
@@ -130,7 +137,7 @@ const EmployeeDirectory = () => {
         </CCardBody>
       </CCard>
 
-      {/* Modal */}
+      {/* Employee Details Modal */}
       <CModal alignment="center" visible={visible} onClose={() => setVisible(false)} size="lg">
         <CModalHeader>
           <CModalTitle>Employee Details</CModalTitle>
@@ -142,46 +149,74 @@ const EmployeeDirectory = () => {
                 <CAvatar
                   src={
                     selectedEmployee.photo?.startsWith('/uploads')
-                      ? `http://localhost:5000${selectedEmployee.photo}`
+                      ? `https://backend-hr1.axleshift.com${selectedEmployee.photo}`
                       : selectedEmployee.photo
                   }
                   size="xxl"
                   shape="circle"
                   className="mb-2"
                 />
-                <h5 className="mt-2">{selectedEmployee.name}</h5>
-                <CBadge color={selectedEmployee.status === 'Active' ? 'success' : 'secondary'}>
-                  {selectedEmployee.status}
+                <h5 className="mt-2">{`${selectedEmployee.firstName} ${selectedEmployee.lastName}`}</h5>
+                <CBadge
+                  color={
+                    selectedEmployee.employmentStatus?.toLowerCase() === 'active'
+                      ? 'success'
+                      : 'secondary'
+                  }
+                >
+                  {selectedEmployee.employmentStatus}
                 </CBadge>
               </div>
 
-              <CRow className="mb-3">
+              <CRow className="mb-2">
                 <CCol md={6}>
-                  <strong>Employee ID:</strong> {selectedEmployee.id}
+                  <strong>Employee ID:</strong> {selectedEmployee.employeeId}
                 </CCol>
                 <CCol md={6}>
                   <strong>Department:</strong> {selectedEmployee.department}
                 </CCol>
               </CRow>
-              <CRow className="mb-3">
+              <CRow className="mb-2">
                 <CCol md={6}>
-                  <strong>Role:</strong> {selectedEmployee.role}
+                  <strong>Role:</strong> {selectedEmployee.position}
                 </CCol>
                 <CCol md={6}>
                   <strong>Email:</strong> {selectedEmployee.email}
                 </CCol>
               </CRow>
-              <CRow className="mb-3">
+              <CRow className="mb-2">
                 <CCol md={6}>
-                  <strong>Phone:</strong> {selectedEmployee.phone}
+                  <strong>Phone:</strong> {selectedEmployee.phoneNumber}
                 </CCol>
                 <CCol md={6}>
                   <strong>Address:</strong> {selectedEmployee.address}
                 </CCol>
               </CRow>
-              <CRow>
+              <CRow className="mb-2">
                 <CCol md={6}>
                   <strong>Date Hired:</strong> {selectedEmployee.dateHired}
+                </CCol>
+                <CCol md={6}>
+                  <strong>Birthdate:</strong> {selectedEmployee.birthdate}
+                </CCol>
+              </CRow>
+              <CRow className="mb-2">
+                <CCol md={6}>
+                  <strong>Gender:</strong> {selectedEmployee.gender}
+                </CCol>
+                <CCol md={6}>
+                  <strong>Civil Status:</strong> {selectedEmployee.civilStatus}
+                </CCol>
+              </CRow>
+              <CRow>
+                <CCol>
+                  <strong>Government IDs:</strong>
+                  <ul className="mt-2">
+                    <li>SSS: {selectedEmployee.governmentIds?.sss}</li>
+                    <li>PhilHealth: {selectedEmployee.governmentIds?.philhealth}</li>
+                    <li>Pag-IBIG: {selectedEmployee.governmentIds?.pagibig}</li>
+                    <li>TIN: {selectedEmployee.governmentIds?.tin}</li>
+                  </ul>
                 </CCol>
               </CRow>
             </>

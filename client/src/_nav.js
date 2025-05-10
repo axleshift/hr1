@@ -6,15 +6,14 @@ import {
   faDashboard,
   faDatabase,
   faFolder,
-  faArrowRight,
-  faChartColumn,
   faCircleExclamation,
   faSignsPost,
   faUserTie,
+  faChartColumn,
+  faBullhorn,
 } from '@fortawesome/free-solid-svg-icons'
 
-// Function that returns nav items based on role
-const getNavItems = (role) => {
+const getNavItems = (role, newHireCount = 0) => {
   const baseNav = [
     {
       component: CNavItem,
@@ -22,16 +21,36 @@ const getNavItems = (role) => {
       to: '/dashboard',
       icon: <FontAwesomeIcon icon={faDashboard} className="nav-icon" />,
     },
+    {
+      component: CNavTitle,
+      name: 'My Records',
+    },
+    {
+      component: CNavItem,
+      name: 'Time and Attendance',
+      to: '/recordmanagement/timeandattendance',
+      icon: <FontAwesomeIcon icon={faCalendarDays} className="nav-icon" />,
+    },
   ]
 
   const adminNav = [
+    {
+      component: CNavTitle,
+      name: 'Announcement',
+    },
+    {
+      component: CNavItem,
+      name: 'Post Announcement',
+      to: '/announcement',
+      icon: <FontAwesomeIcon icon={faBullhorn} className="nav-icon" />,
+    },
     {
       component: CNavTitle,
       name: 'Employee Onboarding',
     },
     {
       component: CNavItem,
-      name: 'Post job Posting',
+      name: 'Post Job Posting',
       to: '/postjob',
       icon: <FontAwesomeIcon icon={faSignsPost} className="nav-icon" />,
     },
@@ -40,10 +59,14 @@ const getNavItems = (role) => {
       name: 'New Hired',
       to: '/newhired',
       icon: <FontAwesomeIcon icon={faUserTie} className="nav-icon" />,
+      badge: {
+        color: 'danger',
+        text: `${newHireCount}`,
+      },
     },
     {
       component: CNavTitle,
-      name: 'RECORD MANAGEMENT',
+      name: 'Record Management',
     },
     {
       component: CNavItem,
@@ -54,24 +77,18 @@ const getNavItems = (role) => {
     {
       component: CNavItem,
       name: 'Time and Attendance',
-      to: 'recordmanagement/timeandattendance',
+      to: '/recordmanagement/timeandattendance',
       icon: <FontAwesomeIcon icon={faCalendarDays} className="nav-icon" />,
     },
     {
       component: CNavItem,
       name: 'Document Management',
-      to: 'recordmanagement/document',
+      to: '/recordmanagement/document',
       icon: <FontAwesomeIcon icon={faFolder} className="nav-icon" />,
     },
     {
       component: CNavTitle,
-      name: 'Peformance Management',
-    },
-    {
-      component: CNavItem,
-      name: 'Performance',
-      to: '/performanemanagement/',
-      icon: <FontAwesomeIcon icon={faChartColumn} className="nav-icon" />,
+      name: 'Performance Management',
     },
     {
       component: CNavItem,
@@ -81,46 +98,12 @@ const getNavItems = (role) => {
     },
   ]
 
-  const employeeNav = [
-    {
-      component: CNavTitle,
-      name: 'My Records',
-    },
-    {
-      component: CNavItem,
-      name: 'Time and Attendance',
-      to: 'recordmanagement/timeandattendance',
-      icon: <FontAwesomeIcon icon={faCalendarDays} className="nav-icon" />,
-    },
-    {
-      component: CNavTitle,
-      name: 'Leave Application',
-    },
-    {
-      component: CNavItem,
-      name: 'Leave Request',
-      to: '/request/leaverequest',
-      icon: <FontAwesomeIcon icon={faArrowRight} className="nav-icon" />,
-    },
-    {
-      component: CNavTitle,
-      name: 'Off Boarding Management',
-    },
-    {
-      component: CNavItem,
-      name: 'Off Boarding Request',
-      to: '/request/offboarding',
-      icon: <FontAwesomeIcon icon={faCircleExclamation} className="nav-icon" />,
-    },
-  ]
-
-  // Combine based on role
   if (role === 'admin') {
-    return [...baseNav, ...adminNav, ...employeeNav] // Admin sees all
-  } else if (role === 'employee') {
-    return [...baseNav, ...employeeNav] // Employee sees limited
+    return [...baseNav, ...adminNav]
+  } else if (role === '') {
+    return [...baseNav]
   } else {
-    return baseNav // default
+    return baseNav
   }
 }
 

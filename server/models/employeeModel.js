@@ -1,17 +1,33 @@
 import mongoose from 'mongoose'
 
-const EmployeeSchema = new mongoose.Schema({
-  id: { type: String, required: true, unique: true },
-  name: String,
+const employeeSchema = new mongoose.Schema({
+  employeeId: String,
+  firstName: String,
+  lastName: String,
+  middleName: String,
+  position: String,
   department: String,
-  role: String,
-  email: String,
-  phone: String,
-  address: String,
+  employmentStatus: String,
   dateHired: String,
-  status: { type: String, enum: ['Active', 'Inactive'], default: 'Active' },
-  photo: String // store image filename or full URL
+  email: String,
+  phoneNumber: String,
+  address: String,
+  birthdate: String,
+  gender: String,
+  civilStatus: String,
+  governmentIds: {
+    sss: String,
+    philhealth: String,
+    pagibig: String,
+    tin: String,
+  },
+  emergencyContact: {
+    name: String,
+    phone: String,
+  },
+  profilePhoto: String,
 })
 
-const Employee = mongoose.model('Employee', EmployeeSchema)
+const Employee = mongoose.model('Employee', employeeSchema)
+
 export default Employee

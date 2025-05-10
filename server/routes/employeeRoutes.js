@@ -1,5 +1,5 @@
 import express from 'express'
-import Employee from '../models/employeeModel.js'
+import { createEmployee, getAllEmployees, getEmployeeCount } from '../controller/employeeController.js'
 import multer from 'multer'
 import path from 'path'
 import fs from 'fs'
@@ -17,31 +17,16 @@ const storage = multer.diskStorage({
     cb(null, Date.now() + path.extname(file.originalname))
   },
 })
+
 const upload = multer({ storage })
 
-// POST: Create new employee
-router.post('/', upload.single('photo'), async (req, res) => {
-  try {
-    const data = req.body
-    const newEmployee = new Employee({
-      ...data,
-      photo: req.file ? `/uploads/${req.file.filename}` : null,
-    })
-    await newEmployee.save()
-    res.status(201).json({ message: 'Employee created', data: newEmployee })
-  } catch (err) {
-    res.status(500).json({ message: 'Error creating employee', error: err.message })
-  }
-})
+// ✅ POST: Create new employee
+router.post('/', upload.single('photo'), createEmployee)
 
-// GET: List all employees
-router.get('/', async (req, res) => {
-  try {
-    const employees = await Employee.find()
-    res.json(employees)
-  } catch (err) {
-    res.status(500).json({ message: 'Error fetching employees' })
-  }
-})
+// ✅ GET: List all employees
+router.get('/', getAllEmployees)
+
+// ✅ NEW: Get total employee count
+router.get('/count', getEmployeeCount)
 
 export default router

@@ -1,249 +1,233 @@
-import React, { useState } from 'react'
-import { Doughnut, Bar } from 'react-chartjs-2'
+import React, { useEffect, useState } from 'react'
+import {
+  CCard,
+  CCardBody,
+  CCardHeader,
+  CCardTitle,
+  CCol,
+  CRow,
+  CWidgetStatsB,
+  CButton,
+  CModal,
+  CModalHeader,
+  CModalTitle,
+  CModalBody,
+  CModalFooter,
+  CTable,
+  CTableHead,
+  CTableRow,
+  CTableHeaderCell,
+  CTableBody,
+  CTableDataCell,
+  CSpinner,
+} from '@coreui/react'
+import { cilUser, cilPeople, cilCheckCircle } from '@coreui/icons'
+import CIcon from '@coreui/icons-react'
+import { Bar, Doughnut } from 'react-chartjs-2'
+import { Link } from 'react-router-dom'
+import axios from 'axios'
 import {
   Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
+  ArcElement,
   Tooltip,
   Legend,
-  ArcElement,
+  BarElement,
+  CategoryScale,
+  LinearScale,
 } from 'chart.js'
 
-ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend, ArcElement)
+ChartJS.register(ArcElement, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
 
-const Dashboard = () => {
-  const [performanceData] = useState([
-    {
-      id: 1,
-      employeeId: '21012265',
-      name: 'John Luis G. lu',
-      goals: 'Improve HR efficiency',
-      performanceRating: 'Excellent',
-      achievements: 95,
-      goalsAchieved: 10,
-    },
-    {
-      id: 2,
-      employeeId: '21012266',
-      name: 'Jane Doe',
-      goals: 'Optimize freight operations',
-      performanceRating: 'Good',
-      achievements: 80,
-      goalsAchieved: 8,
-    },
-    {
-      id: 3,
-      employeeId: '21012267',
-      name: 'Samuel Tan',
-      goals: 'Enhance logistics coordination',
-      performanceRating: 'Satisfactory',
-      achievements: 70,
-      goalsAchieved: 7,
-    },
-  ])
+const AdminDashboard = () => {
+  const [totalEmployees, setTotalEmployees] = useState(0)
+  const [presentToday, setPresentToday] = useState([])
+  const [employeeData, setEmployeeData] = useState([])
+  const [loading, setLoading] = useState(false)
+  const [modalVisible, setModalVisible] = useState(false)
 
-  const [attendanceData] = useState([
-    { employeeId: '21012265', name: 'John Luis G. lu', status: 'Present' },
-    { employeeId: '21012266', name: 'Jane Doe', status: 'Present' },
-    { employeeId: '21012267', name: 'Samuel Tan', status: 'Absent' },
-  ])
+  const today = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Manila' }))
+    .toISOString()
+    .split('T')[0]
 
-  const [leaveRequests] = useState([
-    { employeeId: '21012265', name: 'John Luis G. lu', status: 'Approved' },
-    { employeeId: '21012267', name: 'Samuel Tan', status: 'Pending' },
-  ])
+  const fetchData = async () => {
+    setLoading(true)
+    try {
+      const [employeeRes, attendanceRes] = await Promise.all([
+        axios.get('https://backend-hr1.axleshift.com/api/employees'),
+        axios.get('https://backend-hr1.axleshift.com/api/attendance/today'),
+      ])
 
-  const totalEmployees = attendanceData.length
+      const employees = employeeRes.data || []
+      const attendance = attendanceRes.data || []
 
-  const totalEmployeesData = {
-    labels: ['Total Employees'],
-    datasets: [
-      {
-        data: [totalEmployees],
-        backgroundColor: ['#FFA726'],
-        hoverBackgroundColor: ['#FB8C00'],
-        borderWidth: 0,
-      },
-    ],
+      setEmployeeData(employees)
+      setTotalEmployees(employees.length)
+
+      const present = attendance.filter(
+        (r) => (r.checkIn && !r.checkOut) || (r.checkIn && r.checkOut),
+      )
+      setPresentToday(present)
+    } catch (error) {
+      console.error('Error fetching dashboard data:', error)
+    } finally {
+      setLoading(false)
+    }
   }
 
-  const analyticsData = {
-    labels: performanceData.map((data) => data.name),
+  useEffect(() => {
+    fetchData()
+  }, [])
+
+  const findEmployeeName = (employeeId) => {
+    const emp = employeeData.find((e) => e.employeeId === employeeId)
+    return emp ? `${emp.firstName} ${emp.lastName}` : employeeId
+  }
+
+  const performanceData = {
+    labels: ['John Luis G. Liu', 'Jane Doe', 'Samuel Tan'],
     datasets: [
       {
         label: 'Achievements (%)',
-        data: performanceData.map((data) => data.achievements),
-        backgroundColor: 'rgba(75, 192, 192, 0.6)',
-        borderColor: 'rgba(75, 192, 192, 1)',
-        borderWidth: 1,
+        backgroundColor: '#20c997',
+        data: [95, 80, 75],
       },
       {
         label: 'Goals Achieved',
-        data: performanceData.map((data) => data.goalsAchieved),
-        backgroundColor: 'rgba(153, 102, 255, 0.6)',
-        borderColor: 'rgba(153, 102, 255, 1)',
-        borderWidth: 1,
+        backgroundColor: '#6610f2',
+        data: [10, 7, 5],
       },
     ],
   }
 
-  const presentCount = attendanceData.filter((data) => data.status === 'Present').length
-  const absentCount = attendanceData.filter((data) => data.status === 'Absent').length
-
-  const presentData = {
+  const attendanceData = {
     labels: ['Present', 'Absent'],
     datasets: [
       {
-        data: [presentCount, absentCount],
-        backgroundColor: ['#36A2EB', '#FF6384'],
-        hoverBackgroundColor: ['#36A2EB', '#FF6384'],
-        borderWidth: 0,
+        data: [presentToday.length, totalEmployees - presentToday.length],
+        backgroundColor: ['#0d6efd', '#dc3545'],
+        borderColor: ['#fff'],
+        borderWidth: 2,
       },
     ],
-  }
-
-  const leaveRequestData = {
-    labels: ['Approved', 'Pending'],
-    datasets: [
-      {
-        data: [
-          leaveRequests.filter((r) => r.status === 'Approved').length,
-          leaveRequests.filter((r) => r.status === 'Pending').length,
-        ],
-        backgroundColor: ['#4CAF50', '#FF9800'],
-        hoverBackgroundColor: ['#4CAF50', '#FF9800'],
-        borderWidth: 0,
-      },
-    ],
-  }
-
-  const chartOptions = {
-    responsive: true,
-    plugins: {
-      legend: {
-        labels: {
-          color: '#333',
-        },
-      },
-      tooltip: {
-        bodyColor: '#333',
-        titleColor: '#333',
-        backgroundColor: 'rgba(0, 0, 0, 0.7)',
-      },
-    },
-    layout: {
-      padding: 0,
-      backgroundColor: 'transparent',
-    },
-    scales: {
-      x: {
-        ticks: {
-          color: '#333',
-        },
-      },
-      y: {
-        ticks: {
-          color: '#333',
-        },
-      },
-    },
   }
 
   return (
-    <div style={{ height: '100vh', backgroundColor: '#F4F5FA', padding: '20px', color: '#333' }}>
-      {/* Top Navigation */}
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          marginBottom: '20px',
-          backgroundColor: '#6C63FF',
-          padding: '10px 20px',
-          borderRadius: '10px',
-          color: '#fff',
-        }}
-      >
-        <h2 style={{ margin: 0 }}>Dashboard</h2>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
-          <span>Welcome, John</span>
-          <img src="https://via.placeholder.com/40" alt="Profile" style={{ borderRadius: '50%' }} />
-        </div>
-      </div>
+    <div className="p-4">
+      <h2 className="mb-4 text-center fw-bold">Admin Dashboard</h2>
 
-      {/* Metrics Section */}
-      <div style={{ display: 'flex', gap: '20px', marginBottom: '20px' }}>
-        <div
-          style={{
-            flex: 1,
-            backgroundColor: '#fff',
-            padding: '20px',
-            borderRadius: '10px',
-            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-          }}
-        >
-          <h3>Total Employees</h3>
-          <p style={{ fontSize: '24px', fontWeight: 'bold', color: '#6C63FF' }}>{totalEmployees}</p>
+      {loading ? (
+        <div className="text-center my-5">
+          <CSpinner color="primary" />
         </div>
-        <div
-          style={{
-            flex: 1,
-            backgroundColor: '#fff',
-            padding: '20px',
-            borderRadius: '10px',
-            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-          }}
-        >
-          <h3>Present Employees</h3>
-          <p style={{ fontSize: '24px', fontWeight: 'bold', color: '#6C63FF' }}>{presentCount}</p>
-        </div>
-        <div
-          style={{
-            flex: 1,
-            backgroundColor: '#fff',
-            padding: '20px',
-            borderRadius: '10px',
-            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-          }}
-        >
-          <h3>Leave Requests</h3>
-          <p style={{ fontSize: '24px', fontWeight: 'bold', color: '#6C63FF' }}>
-            {leaveRequests.filter((r) => r.status === 'Approved').length} Approved
-          </p>
-        </div>
-      </div>
+      ) : (
+        <>
+          <CRow className="mb-4 g-4 text-center">
+            <CCol xs={12} md={4}>
+              <Link to="/recordmanagement/employeeinfo" style={{ textDecoration: 'none' }}>
+                <CWidgetStatsB
+                  className="mb-3"
+                  color="primary"
+                  value={totalEmployees}
+                  title="Total Employees"
+                  icon={<CIcon icon={cilPeople} height={52} />}
+                  style={{ cursor: 'pointer' }}
+                />
+              </Link>
+            </CCol>
+            <CCol xs={12} md={4}>
+              <CWidgetStatsB
+                className="mb-3"
+                color="success"
+                value={presentToday.length}
+                title="Present Employees"
+                icon={<CIcon icon={cilUser} height={52} />}
+                style={{ cursor: 'pointer' }}
+                onClick={() => setModalVisible(true)}
+              />
+            </CCol>
+            <CCol xs={12} md={4}>
+              <CWidgetStatsB
+                className="mb-3"
+                color="info"
+                value="1 Approved"
+                title="Leave Requests"
+                icon={<CIcon icon={cilCheckCircle} height={52} />}
+              />
+            </CCol>
+          </CRow>
 
-      {/* Charts Section */}
-      <div style={{ display: 'flex', gap: '20px' }}>
-        <div
-          style={{
-            flex: 2,
-            backgroundColor: '#fff',
-            padding: '20px',
-            borderRadius: '10px',
-            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-          }}
-        >
-          <h3>Employee Performance Overview</h3>
-          <Bar data={analyticsData} options={chartOptions} />
-        </div>
-        <div
-          style={{
-            flex: 1,
-            backgroundColor: '#fff',
-            padding: '20px',
-            borderRadius: '10px',
-            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-          }}
-        >
-          <h3>Attendance</h3>
-          <Doughnut data={presentData} options={chartOptions} />
-        </div>
-      </div>
+          <CRow className="g-4">
+            <CCol md={8}>
+              <CCard>
+                <CCardHeader>
+                  <CCardTitle>Performance Overview</CCardTitle>
+                </CCardHeader>
+                <CCardBody>
+                  <Bar data={performanceData} />
+                </CCardBody>
+              </CCard>
+            </CCol>
+
+            <CCol md={4}>
+              <CCard>
+                <CCardHeader>
+                  <CCardTitle>Attendance Overview</CCardTitle>
+                </CCardHeader>
+                <CCardBody>
+                  <Doughnut data={attendanceData} />
+                </CCardBody>
+              </CCard>
+            </CCol>
+          </CRow>
+
+          {/* Modal for Present Employee Details */}
+          <CModal
+            alignment="center"
+            visible={modalVisible}
+            onClose={() => setModalVisible(false)}
+            size="lg"
+          >
+            <CModalHeader>
+              <CModalTitle>Employees Present Today - {today}</CModalTitle>
+            </CModalHeader>
+            <CModalBody>
+              {presentToday.length > 0 ? (
+                <CTable responsive hover striped align="middle">
+                  <CTableHead color="light">
+                    <CTableRow>
+                      <CTableHeaderCell>Employee ID</CTableHeaderCell>
+                      <CTableHeaderCell>Full Name</CTableHeaderCell>
+                      <CTableHeaderCell>Check-In</CTableHeaderCell>
+                      <CTableHeaderCell>Check-Out</CTableHeaderCell>
+                      <CTableHeaderCell>Hours Worked</CTableHeaderCell>
+                    </CTableRow>
+                  </CTableHead>
+                  <CTableBody>
+                    {presentToday.map((emp) => (
+                      <CTableRow key={`${emp.employeeId}-${emp.date}`}>
+                        <CTableDataCell>{emp.employeeId}</CTableDataCell>
+                        <CTableDataCell>{findEmployeeName(emp.employeeId)}</CTableDataCell>
+                        <CTableDataCell>{emp.checkIn || '--'}</CTableDataCell>
+                        <CTableDataCell>{emp.checkOut || '--'}</CTableDataCell>
+                        <CTableDataCell>{emp.hoursWorked || '0'} hrs</CTableDataCell>
+                      </CTableRow>
+                    ))}
+                  </CTableBody>
+                </CTable>
+              ) : (
+                <p className="text-muted text-center">No employees present today.</p>
+              )}
+            </CModalBody>
+            <CModalFooter>
+              <CButton color="secondary" onClick={() => setModalVisible(false)}>
+                Close
+              </CButton>
+            </CModalFooter>
+          </CModal>
+        </>
+      )}
     </div>
   )
 }
 
-export default Dashboard
+export default AdminDashboard

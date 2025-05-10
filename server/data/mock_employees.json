@@ -1,0 +1,1892 @@
+[
+  {
+    "employeeId": "EMP001",
+    "firstName": "Dillon",
+    "lastName": "Huff",
+    "middleName": "Kimberly",
+    "position": "Logistics Officer",
+    "department": "Logistics",
+    "employmentStatus": "Active",
+    "dateHired": "2020-09-25",
+    "email": "alyssa63@anderson.com",
+    "phoneNumber": "173-075-0938x6010",
+    "address": "35065 Gutierrez Shoals, Sharonchester, TN 12205",
+    "birthdate": "1974-04-16",
+    "gender": "Male",
+    "civilStatus": "Single",
+    "governmentIds": {
+      "sss": "SSS-691684521",
+      "philhealth": "PH-303635778",
+      "pagibig": "PG-792750974",
+      "tin": "TIN-957388764"
+    },
+    "emergencyContact": {
+      "name": "Nancy Hampton",
+      "phone": "6003642470"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP002",
+    "firstName": "Michelle",
+    "lastName": "Edwards",
+    "middleName": "Kevin",
+    "position": "Accountant",
+    "department": "Accounting",
+    "employmentStatus": "Active",
+    "dateHired": "2022-02-02",
+    "email": "tcole@singh.com",
+    "phoneNumber": "(829)705-8049x06708",
+    "address": "90170 Darius Summit Apt. 884, East Kayla, GA 38861",
+    "birthdate": "1971-05-09",
+    "gender": "Female",
+    "civilStatus": "Single",
+    "governmentIds": {
+      "sss": "SSS-292423814",
+      "philhealth": "PH-690201299",
+      "pagibig": "PG-484758716",
+      "tin": "TIN-488262921"
+    },
+    "emergencyContact": {
+      "name": "David Anderson",
+      "phone": "001-281-293-8996x921"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP003",
+    "firstName": "Anthony",
+    "lastName": "Larsen",
+    "middleName": "Victoria",
+    "position": "IT Support",
+    "department": "IT Department",
+    "employmentStatus": "Active",
+    "dateHired": "2022-07-22",
+    "email": "perrysarah@gmail.com",
+    "phoneNumber": "+1-380-441-5202",
+    "address": "334 Marks Point Apt. 727, Jerryfort, TX 81856",
+    "birthdate": "1995-03-12",
+    "gender": "Male",
+    "civilStatus": "Single",
+    "governmentIds": {
+      "sss": "SSS-312318828",
+      "philhealth": "PH-383487494",
+      "pagibig": "PG-291733992",
+      "tin": "TIN-556764367"
+    },
+    "emergencyContact": {
+      "name": "Justin Oconnor",
+      "phone": "001-437-413-5716x9753"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP004",
+    "firstName": "Patrick",
+    "lastName": "Silva",
+    "middleName": "Mark",
+    "position": "Documentation Specialist",
+    "department": "Freight Forwarding",
+    "employmentStatus": "Active",
+    "dateHired": "2022-11-11",
+    "email": "mgeorge@anthony-estrada.com",
+    "phoneNumber": "865.943.8149x5786",
+    "address": "96443 Summers Mills Suite 788, North Jeanbury, TX 29910",
+    "birthdate": "1971-08-16",
+    "gender": "Male",
+    "civilStatus": "Married",
+    "governmentIds": {
+      "sss": "SSS-194635113",
+      "philhealth": "PH-924562435",
+      "pagibig": "PG-508294062",
+      "tin": "TIN-702001472"
+    },
+    "emergencyContact": {
+      "name": "Kara Harvey",
+      "phone": "342.343.4300x9205"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP005",
+    "firstName": "Seth",
+    "lastName": "Le",
+    "middleName": "Kristin",
+    "position": "Full Stack Developer",
+    "department": "IT Department",
+    "employmentStatus": "Active",
+    "dateHired": "2022-02-24",
+    "email": "kristin63@stewart-chang.com",
+    "phoneNumber": "042.629.6098",
+    "address": "6698 Dustin Extensions, Susantown, NE 13135",
+    "birthdate": "1975-03-05",
+    "gender": "Male",
+    "civilStatus": "Single",
+    "governmentIds": {
+      "sss": "SSS-166241513",
+      "philhealth": "PH-538873198",
+      "pagibig": "PG-178902419",
+      "tin": "TIN-636070789"
+    },
+    "emergencyContact": {
+      "name": "Mathew Phillips",
+      "phone": "(651)001-3112"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP006",
+    "firstName": "Deborah",
+    "lastName": "Acosta",
+    "middleName": "Robert",
+    "position": "Operations Coordinator",
+    "department": "Operations",
+    "employmentStatus": "Active",
+    "dateHired": "2024-12-23",
+    "email": "jeffrey32@cervantes-johnson.biz",
+    "phoneNumber": "314.500.0958x80749",
+    "address": "PSC 5500, Box 7811, APO AA 19052",
+    "birthdate": "1975-08-20",
+    "gender": "Female",
+    "civilStatus": "Single",
+    "governmentIds": {
+      "sss": "SSS-339646217",
+      "philhealth": "PH-747512669",
+      "pagibig": "PG-531824495",
+      "tin": "TIN-283344209"
+    },
+    "emergencyContact": {
+      "name": "Molly Simmons",
+      "phone": "(426)108-1200x0522"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP007",
+    "firstName": "Marissa",
+    "lastName": "Walters",
+    "middleName": "Karen",
+    "position": "Dispatcher",
+    "department": "Logistics",
+    "employmentStatus": "Active",
+    "dateHired": "2020-09-04",
+    "email": "edwardlee@gmail.com",
+    "phoneNumber": "001-016-161-8084x4236",
+    "address": "Unit 5175 Box 4496, DPO AP 52217",
+    "birthdate": "1979-11-23",
+    "gender": "Female",
+    "civilStatus": "Married",
+    "governmentIds": {
+      "sss": "SSS-852700554",
+      "philhealth": "PH-981940987",
+      "pagibig": "PG-541552973",
+      "tin": "TIN-507035976"
+    },
+    "emergencyContact": {
+      "name": "Alexander Booker",
+      "phone": "278-750-1075x61310"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP008",
+    "firstName": "Robert",
+    "lastName": "Harrell",
+    "middleName": "Crystal",
+    "position": "Customs Specialist",
+    "department": "Customs Clearance",
+    "employmentStatus": "Active",
+    "dateHired": "2021-11-12",
+    "email": "vicki76@yahoo.com",
+    "phoneNumber": "637.344.0153",
+    "address": "USCGC Moore, FPO AE 89456",
+    "birthdate": "1992-04-19",
+    "gender": "Male",
+    "civilStatus": "Single",
+    "governmentIds": {
+      "sss": "SSS-791428780",
+      "philhealth": "PH-899172872",
+      "pagibig": "PG-933086680",
+      "tin": "TIN-295587036"
+    },
+    "emergencyContact": {
+      "name": "Erica Williams",
+      "phone": "001-884-949-7390x3879"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP009",
+    "firstName": "Jessica",
+    "lastName": "Sandoval",
+    "middleName": "Rachael",
+    "position": "HR Officer",
+    "department": "Human Resources",
+    "employmentStatus": "Active",
+    "dateHired": "2020-12-25",
+    "email": "rebeccapowell@yahoo.com",
+    "phoneNumber": "001-835-944-5511x812",
+    "address": "752 Gonzalez Drive Suite 486, North Curtis, CA 28842",
+    "birthdate": "1975-04-21",
+    "gender": "Female",
+    "civilStatus": "Single",
+    "governmentIds": {
+      "sss": "SSS-611291910",
+      "philhealth": "PH-401636802",
+      "pagibig": "PG-295444959",
+      "tin": "TIN-638469663"
+    },
+    "emergencyContact": {
+      "name": "Katherine Evans",
+      "phone": "823.562.9892x91708"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP010",
+    "firstName": "Kristin",
+    "lastName": "Mcdaniel",
+    "middleName": "Rhonda",
+    "position": "Documentation Specialist",
+    "department": "Freight Forwarding",
+    "employmentStatus": "Active",
+    "dateHired": "2023-12-21",
+    "email": "johnny62@hotmail.com",
+    "phoneNumber": "+1-545-198-8523",
+    "address": "21442 Carol Station Suite 823, Williamsmouth, NC 48856",
+    "birthdate": "2003-04-02",
+    "gender": "Female",
+    "civilStatus": "Single",
+    "governmentIds": {
+      "sss": "SSS-453189837",
+      "philhealth": "PH-185877334",
+      "pagibig": "PG-197550952",
+      "tin": "TIN-870487772"
+    },
+    "emergencyContact": {
+      "name": "David Dickerson",
+      "phone": "001-772-073-6210"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP011",
+    "firstName": "William",
+    "lastName": "Oneal",
+    "middleName": "Kimberly",
+    "position": "Driver",
+    "department": "Dispatch",
+    "employmentStatus": "Active",
+    "dateHired": "2023-03-11",
+    "email": "finleyjoshua@gmail.com",
+    "phoneNumber": "957-467-5056x66607",
+    "address": "7108 Tiffany Glen Apt. 345, Bradleyfort, AR 22317",
+    "birthdate": "1970-10-26",
+    "gender": "Male",
+    "civilStatus": "Married",
+    "governmentIds": {
+      "sss": "SSS-343107934",
+      "philhealth": "PH-989500032",
+      "pagibig": "PG-685728507",
+      "tin": "TIN-694968519"
+    },
+    "emergencyContact": {
+      "name": "Melissa Andrade",
+      "phone": "(944)273-4712x97042"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP012",
+    "firstName": "Jill",
+    "lastName": "Young",
+    "middleName": "Sara",
+    "position": "Documentation Specialist",
+    "department": "Freight Forwarding",
+    "employmentStatus": "Active",
+    "dateHired": "2020-12-02",
+    "email": "mlarson@king-valencia.com",
+    "phoneNumber": "001-440-238-9902x1385",
+    "address": "073 Wolfe Gateway Suite 886, West Ashley, OR 08434",
+    "birthdate": "1994-10-23",
+    "gender": "Female",
+    "civilStatus": "Married",
+    "governmentIds": {
+      "sss": "SSS-963608097",
+      "philhealth": "PH-990189883",
+      "pagibig": "PG-789541365",
+      "tin": "TIN-969287098"
+    },
+    "emergencyContact": {
+      "name": "Sara Campbell",
+      "phone": "(132)001-7620x93314"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP013",
+    "firstName": "Kathleen",
+    "lastName": "Villa",
+    "middleName": "Sarah",
+    "position": "Operations Supervisor",
+    "department": "Operations",
+    "employmentStatus": "Active",
+    "dateHired": "2020-12-12",
+    "email": "madisonmendez@gmail.com",
+    "phoneNumber": "001-271-664-5066",
+    "address": "9101 Elizabeth Freeway, Lynnstad, WV 22650",
+    "birthdate": "1994-09-27",
+    "gender": "Female",
+    "civilStatus": "Married",
+    "governmentIds": {
+      "sss": "SSS-433733363",
+      "philhealth": "PH-758279019",
+      "pagibig": "PG-263701234",
+      "tin": "TIN-375241010"
+    },
+    "emergencyContact": {
+      "name": "Michelle Vincent",
+      "phone": "001-817-640-1369"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP014",
+    "firstName": "Joseph",
+    "lastName": "Harris",
+    "middleName": "Ana",
+    "position": "Accounting Staff",
+    "department": "Accounting",
+    "employmentStatus": "Active",
+    "dateHired": "2022-04-14",
+    "email": "stephaniemccarthy@evans.com",
+    "phoneNumber": "855.903.2604x606",
+    "address": "9889 Autumn Corner, Tinaland, WI 23402",
+    "birthdate": "1990-05-21",
+    "gender": "Male",
+    "civilStatus": "Single",
+    "governmentIds": {
+      "sss": "SSS-872886066",
+      "philhealth": "PH-795683751",
+      "pagibig": "PG-472992271",
+      "tin": "TIN-991387814"
+    },
+    "emergencyContact": {
+      "name": "Angelica Cooper",
+      "phone": "+1-245-269-1052x97777"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP015",
+    "firstName": "Neil",
+    "lastName": "Cooper",
+    "middleName": "Martin",
+    "position": "IT Support",
+    "department": "IT Department",
+    "employmentStatus": "Active",
+    "dateHired": "2020-06-20",
+    "email": "andersonkayla@dunn.com",
+    "phoneNumber": "(855)015-0290x384",
+    "address": "251 Sheppard Ford, Clarkeberg, MS 53256",
+    "birthdate": "1979-08-01",
+    "gender": "Male",
+    "civilStatus": "Married",
+    "governmentIds": {
+      "sss": "SSS-691903343",
+      "philhealth": "PH-823946509",
+      "pagibig": "PG-199189401",
+      "tin": "TIN-568761545"
+    },
+    "emergencyContact": {
+      "name": "Karen Salinas",
+      "phone": "9742536879"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP016",
+    "firstName": "Melissa",
+    "lastName": "Murillo",
+    "middleName": "Bryan",
+    "position": "Dispatch Supervisor",
+    "department": "Dispatch",
+    "employmentStatus": "Active",
+    "dateHired": "2024-01-13",
+    "email": "melissa91@yahoo.com",
+    "phoneNumber": "+1-089-907-8872x94564",
+    "address": "200 Michelle Common Apt. 366, Williamstown, ME 88367",
+    "birthdate": "1972-08-25",
+    "gender": "Female",
+    "civilStatus": "Widowed",
+    "governmentIds": {
+      "sss": "SSS-778164425",
+      "philhealth": "PH-849882457",
+      "pagibig": "PG-199547527",
+      "tin": "TIN-171253729"
+    },
+    "emergencyContact": {
+      "name": "Ryan Keith",
+      "phone": "1446739105"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP017",
+    "firstName": "Joseph",
+    "lastName": "Garcia",
+    "middleName": "Joshua",
+    "position": "Inventory Specialist",
+    "department": "Warehouse",
+    "employmentStatus": "Active",
+    "dateHired": "2025-01-16",
+    "email": "diane67@yahoo.com",
+    "phoneNumber": "159-828-2473x7059",
+    "address": "9873 Harris Squares Apt. 482, Williamsview, CO 23814",
+    "birthdate": "1993-06-15",
+    "gender": "Male",
+    "civilStatus": "Widowed",
+    "governmentIds": {
+      "sss": "SSS-325579811",
+      "philhealth": "PH-477680651",
+      "pagibig": "PG-239114276",
+      "tin": "TIN-790011463"
+    },
+    "emergencyContact": {
+      "name": "Ryan Thomas",
+      "phone": "024.164.4227"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP018",
+    "firstName": "Gregory",
+    "lastName": "Lucero",
+    "middleName": "Tracey",
+    "position": "Full Stack Developer",
+    "department": "IT Department",
+    "employmentStatus": "Active",
+    "dateHired": "2020-09-15",
+    "email": "kirk98@hotmail.com",
+    "phoneNumber": "933.857.6960x94277",
+    "address": "45972 Gross Way Apt. 984, Reedside, KS 15945",
+    "birthdate": "1986-05-16",
+    "gender": "Male",
+    "civilStatus": "Single",
+    "governmentIds": {
+      "sss": "SSS-284675127",
+      "philhealth": "PH-600474639",
+      "pagibig": "PG-180251082",
+      "tin": "TIN-500780695"
+    },
+    "emergencyContact": {
+      "name": "Joshua Campbell",
+      "phone": "001-395-750-6144x87411"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP019",
+    "firstName": "Benjamin",
+    "lastName": "Sullivan",
+    "middleName": "Jackie",
+    "position": "Operations Supervisor",
+    "department": "Operations",
+    "employmentStatus": "Active",
+    "dateHired": "2022-11-24",
+    "email": "hmckay@yahoo.com",
+    "phoneNumber": "524-464-0833x62786",
+    "address": "5702 Chelsea Expressway Apt. 573, Port Amandastad, OR 13385",
+    "birthdate": "1988-02-02",
+    "gender": "Male",
+    "civilStatus": "Married",
+    "governmentIds": {
+      "sss": "SSS-362007162",
+      "philhealth": "PH-105907042",
+      "pagibig": "PG-467762269",
+      "tin": "TIN-918007208"
+    },
+    "emergencyContact": {
+      "name": "Jenna Hinton",
+      "phone": "001-361-498-7366"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP020",
+    "firstName": "Steven",
+    "lastName": "Kramer",
+    "middleName": "Stephanie",
+    "position": "Recruitment Specialist",
+    "department": "Human Resources",
+    "employmentStatus": "Active",
+    "dateHired": "2022-12-03",
+    "email": "vincentamy@wiley-lopez.com",
+    "phoneNumber": "(477)194-9538",
+    "address": "Unit 2034 Box 4236, DPO AE 08021",
+    "birthdate": "1982-01-04",
+    "gender": "Male",
+    "civilStatus": "Widowed",
+    "governmentIds": {
+      "sss": "SSS-394503392",
+      "philhealth": "PH-364264173",
+      "pagibig": "PG-261916428",
+      "tin": "TIN-184593774"
+    },
+    "emergencyContact": {
+      "name": "Dawn Morris",
+      "phone": "821.106.8766x69954"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP021",
+    "firstName": "Stephen",
+    "lastName": "Avila",
+    "middleName": "Stephen",
+    "position": "Customer Service Rep",
+    "department": "Customer Service",
+    "employmentStatus": "Active",
+    "dateHired": "2025-01-26",
+    "email": "kingfrank@perez.com",
+    "phoneNumber": "(391)404-5606",
+    "address": "4720 Jose Drives Apt. 967, Port Katherine, CA 05467",
+    "birthdate": "1986-09-10",
+    "gender": "Male",
+    "civilStatus": "Single",
+    "governmentIds": {
+      "sss": "SSS-410903408",
+      "philhealth": "PH-812110385",
+      "pagibig": "PG-269087056",
+      "tin": "TIN-359294238"
+    },
+    "emergencyContact": {
+      "name": "Tamara Nunez",
+      "phone": "(557)667-4334x43878"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP022",
+    "firstName": "Michele",
+    "lastName": "Mosley",
+    "middleName": "William",
+    "position": "Freight Coordinator",
+    "department": "Freight Forwarding",
+    "employmentStatus": "Active",
+    "dateHired": "2021-10-26",
+    "email": "steven85@yahoo.com",
+    "phoneNumber": "+1-055-944-0910x436",
+    "address": "PSC 3950, Box 6236, APO AE 11930",
+    "birthdate": "1986-09-28",
+    "gender": "Female",
+    "civilStatus": "Widowed",
+    "governmentIds": {
+      "sss": "SSS-484711849",
+      "philhealth": "PH-792498020",
+      "pagibig": "PG-949676865",
+      "tin": "TIN-525002829"
+    },
+    "emergencyContact": {
+      "name": "Melissa Flores",
+      "phone": "+1-818-879-3040x3577"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP023",
+    "firstName": "Amanda",
+    "lastName": "Horne",
+    "middleName": "Shari",
+    "position": "Logistics Manager",
+    "department": "Logistics",
+    "employmentStatus": "Active",
+    "dateHired": "2025-01-10",
+    "email": "smithrobin@hotmail.com",
+    "phoneNumber": "(528)181-3546x42239",
+    "address": "553 Crane Ferry Apt. 512, East Brendaside, RI 16041",
+    "birthdate": "1977-12-12",
+    "gender": "Female",
+    "civilStatus": "Widowed",
+    "governmentIds": {
+      "sss": "SSS-543909753",
+      "philhealth": "PH-351929634",
+      "pagibig": "PG-971504687",
+      "tin": "TIN-702858469"
+    },
+    "emergencyContact": {
+      "name": "Rebecca Conner",
+      "phone": "+1-050-442-9477x20885"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP024",
+    "firstName": "Gary",
+    "lastName": "Dunn",
+    "middleName": "Courtney",
+    "position": "HR Officer",
+    "department": "Human Resources",
+    "employmentStatus": "Active",
+    "dateHired": "2022-02-08",
+    "email": "sierra95@lambert.info",
+    "phoneNumber": "001-368-162-1306x8367",
+    "address": "5255 Rebecca Pine Apt. 762, East Elizabeth, NV 81435",
+    "birthdate": "2002-08-24",
+    "gender": "Male",
+    "civilStatus": "Married",
+    "governmentIds": {
+      "sss": "SSS-948656113",
+      "philhealth": "PH-254274204",
+      "pagibig": "PG-957953650",
+      "tin": "TIN-313838650"
+    },
+    "emergencyContact": {
+      "name": "Derek Green",
+      "phone": "097.212.8417x5465"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP025",
+    "firstName": "Joshua",
+    "lastName": "Santiago",
+    "middleName": "Cameron",
+    "position": "Accounting Staff",
+    "department": "Accounting",
+    "employmentStatus": "Active",
+    "dateHired": "2023-10-03",
+    "email": "pgray@gmail.com",
+    "phoneNumber": "339-170-3961x3452",
+    "address": "54243 Robert Harbor, Port Jonathan, MT 39433",
+    "birthdate": "1993-04-20",
+    "gender": "Male",
+    "civilStatus": "Married",
+    "governmentIds": {
+      "sss": "SSS-438095404",
+      "philhealth": "PH-350063057",
+      "pagibig": "PG-871299466",
+      "tin": "TIN-757370667"
+    },
+    "emergencyContact": {
+      "name": "Paige Mcconnell",
+      "phone": "586.796.1506x2877"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP026",
+    "firstName": "Jeremy",
+    "lastName": "Walton",
+    "middleName": "Nathaniel",
+    "position": "Logistics Manager",
+    "department": "Logistics",
+    "employmentStatus": "Active",
+    "dateHired": "2021-05-20",
+    "email": "hevans@gmail.com",
+    "phoneNumber": "001-463-545-1136x02587",
+    "address": "5930 Chris Summit Apt. 665, North Charles, OH 86033",
+    "birthdate": "1999-03-16",
+    "gender": "Male",
+    "civilStatus": "Single",
+    "governmentIds": {
+      "sss": "SSS-422055583",
+      "philhealth": "PH-126888807",
+      "pagibig": "PG-615586807",
+      "tin": "TIN-917370426"
+    },
+    "emergencyContact": {
+      "name": "Michael Jones",
+      "phone": "+1-306-568-3776x658"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP027",
+    "firstName": "John",
+    "lastName": "Thomas",
+    "middleName": "Kristin",
+    "position": "Customs Specialist",
+    "department": "Customs Clearance",
+    "employmentStatus": "Active",
+    "dateHired": "2024-10-11",
+    "email": "baileyjessica@woodard.com",
+    "phoneNumber": "585.306.9838x17505",
+    "address": "022 Robert Lock, Cynthiafort, NH 56731",
+    "birthdate": "1979-01-23",
+    "gender": "Male",
+    "civilStatus": "Married",
+    "governmentIds": {
+      "sss": "SSS-905374948",
+      "philhealth": "PH-553327123",
+      "pagibig": "PG-815423323",
+      "tin": "TIN-880188644"
+    },
+    "emergencyContact": {
+      "name": "Jo Rocha",
+      "phone": "(034)990-0862"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP028",
+    "firstName": "Terri",
+    "lastName": "Shelton",
+    "middleName": "Sean",
+    "position": "Warehouse Manager",
+    "department": "Warehouse",
+    "employmentStatus": "Active",
+    "dateHired": "2023-08-05",
+    "email": "mrojas@hotmail.com",
+    "phoneNumber": "(280)456-7423x500",
+    "address": "137 Patterson Bypass, Edwardton, FL 80643",
+    "birthdate": "1990-07-10",
+    "gender": "Female",
+    "civilStatus": "Married",
+    "governmentIds": {
+      "sss": "SSS-646691224",
+      "philhealth": "PH-861248176",
+      "pagibig": "PG-986089672",
+      "tin": "TIN-762971466"
+    },
+    "emergencyContact": {
+      "name": "Claudia Blevins",
+      "phone": "(108)336-2377"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP029",
+    "firstName": "Kimberly",
+    "lastName": "Johnson",
+    "middleName": "William",
+    "position": "Client Relations",
+    "department": "Customer Service",
+    "employmentStatus": "Active",
+    "dateHired": "2020-08-25",
+    "email": "rmills@hotmail.com",
+    "phoneNumber": "001-214-903-1802",
+    "address": "206 Robert Wells Apt. 397, Rebeccaside, TX 58610",
+    "birthdate": "1988-06-07",
+    "gender": "Female",
+    "civilStatus": "Married",
+    "governmentIds": {
+      "sss": "SSS-712121338",
+      "philhealth": "PH-794209248",
+      "pagibig": "PG-986898234",
+      "tin": "TIN-540545131"
+    },
+    "emergencyContact": {
+      "name": "Gregory Wilson",
+      "phone": "033-468-1176"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP030",
+    "firstName": "Mary",
+    "lastName": "Hernandez",
+    "middleName": "Victoria",
+    "position": "IT Support",
+    "department": "IT Department",
+    "employmentStatus": "Active",
+    "dateHired": "2024-09-17",
+    "email": "daltonerica@white.info",
+    "phoneNumber": "299.480.7862x15383",
+    "address": "72216 Banks Wells, Hoffmanchester, UT 96894",
+    "birthdate": "1971-09-24",
+    "gender": "Female",
+    "civilStatus": "Single",
+    "governmentIds": {
+      "sss": "SSS-241162906",
+      "philhealth": "PH-504069795",
+      "pagibig": "PG-838651976",
+      "tin": "TIN-774894777"
+    },
+    "emergencyContact": {
+      "name": "Bonnie Serrano",
+      "phone": "001-962-620-0215x539"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP031",
+    "firstName": "Joshua",
+    "lastName": "Hart",
+    "middleName": "Rachael",
+    "position": "Customer Service Rep",
+    "department": "Customer Service",
+    "employmentStatus": "Active",
+    "dateHired": "2024-09-03",
+    "email": "cpetersen@hamilton.com",
+    "phoneNumber": "(937)719-5866x335",
+    "address": "33612 Ramirez Motorway, Johnsonstad, TN 68700",
+    "birthdate": "1995-02-07",
+    "gender": "Male",
+    "civilStatus": "Single",
+    "governmentIds": {
+      "sss": "SSS-684899231",
+      "philhealth": "PH-427026321",
+      "pagibig": "PG-543606460",
+      "tin": "TIN-302137663"
+    },
+    "emergencyContact": {
+      "name": "Megan Nguyen",
+      "phone": "532-113-2894x653"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP032",
+    "firstName": "Destiny",
+    "lastName": "Perry",
+    "middleName": "Linda",
+    "position": "Freight Coordinator",
+    "department": "Freight Forwarding",
+    "employmentStatus": "Active",
+    "dateHired": "2023-06-20",
+    "email": "amanda13@gmail.com",
+    "phoneNumber": "733-051-7917x871",
+    "address": "42862 Robin Causeway Apt. 666, South Dominiquefurt, UT 32267",
+    "birthdate": "1986-09-16",
+    "gender": "Female",
+    "civilStatus": "Widowed",
+    "governmentIds": {
+      "sss": "SSS-498272757",
+      "philhealth": "PH-734056821",
+      "pagibig": "PG-399409002",
+      "tin": "TIN-292486913"
+    },
+    "emergencyContact": {
+      "name": "Michelle Garrison",
+      "phone": "(216)701-6293x30904"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP033",
+    "firstName": "Tracy",
+    "lastName": "Cole",
+    "middleName": "Angela",
+    "position": "Inventory Specialist",
+    "department": "Warehouse",
+    "employmentStatus": "Active",
+    "dateHired": "2021-05-10",
+    "email": "odavis@small.com",
+    "phoneNumber": "277.318.1871x50525",
+    "address": "333 Stephanie Island Apt. 404, New Susanside, RI 52006",
+    "birthdate": "1982-07-12",
+    "gender": "Female",
+    "civilStatus": "Widowed",
+    "governmentIds": {
+      "sss": "SSS-232581493",
+      "philhealth": "PH-103226084",
+      "pagibig": "PG-845044118",
+      "tin": "TIN-194051581"
+    },
+    "emergencyContact": {
+      "name": "Katherine Kim",
+      "phone": "298-950-1312"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP034",
+    "firstName": "Angela",
+    "lastName": "Bass",
+    "middleName": "Diamond",
+    "position": "Full Stack Developer",
+    "department": "IT Department",
+    "employmentStatus": "Active",
+    "dateHired": "2020-09-01",
+    "email": "deleonjamie@warren-ramos.net",
+    "phoneNumber": "373.342.0821",
+    "address": "171 Parker Stravenue Suite 612, West Anthonyville, RI 98341",
+    "birthdate": "1991-03-05",
+    "gender": "Female",
+    "civilStatus": "Married",
+    "governmentIds": {
+      "sss": "SSS-746845435",
+      "philhealth": "PH-431299744",
+      "pagibig": "PG-786204454",
+      "tin": "TIN-399373920"
+    },
+    "emergencyContact": {
+      "name": "Bryan Holloway",
+      "phone": "(550)794-1172"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP035",
+    "firstName": "Theresa",
+    "lastName": "Foster",
+    "middleName": "Douglas",
+    "position": "Customs Specialist",
+    "department": "Customs Clearance",
+    "employmentStatus": "Active",
+    "dateHired": "2021-03-26",
+    "email": "derekbarton@hotmail.com",
+    "phoneNumber": "+1-683-573-4354x49473",
+    "address": "21787 Olson Point Suite 863, Kellyport, NM 34947",
+    "birthdate": "1978-08-28",
+    "gender": "Female",
+    "civilStatus": "Widowed",
+    "governmentIds": {
+      "sss": "SSS-823243425",
+      "philhealth": "PH-914959140",
+      "pagibig": "PG-407177604",
+      "tin": "TIN-505303018"
+    },
+    "emergencyContact": {
+      "name": "Amanda Johnson",
+      "phone": "1074353239"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP036",
+    "firstName": "Meredith",
+    "lastName": "Johnson",
+    "middleName": "Makayla",
+    "position": "Driver",
+    "department": "Dispatch",
+    "employmentStatus": "Active",
+    "dateHired": "2020-05-30",
+    "email": "beckymiller@smith-hernandez.com",
+    "phoneNumber": "049-548-6316x6067",
+    "address": "1534 Collins Rest, Diazfort, VA 40257",
+    "birthdate": "1983-03-06",
+    "gender": "Female",
+    "civilStatus": "Married",
+    "governmentIds": {
+      "sss": "SSS-818936668",
+      "philhealth": "PH-962067599",
+      "pagibig": "PG-299797465",
+      "tin": "TIN-385556482"
+    },
+    "emergencyContact": {
+      "name": "Tony Sawyer",
+      "phone": "602-890-0528x67050"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP037",
+    "firstName": "Michelle",
+    "lastName": "Daugherty",
+    "middleName": "Thomas",
+    "position": "Operations Supervisor",
+    "department": "Operations",
+    "employmentStatus": "Active",
+    "dateHired": "2020-10-23",
+    "email": "melanie36@moon.com",
+    "phoneNumber": "773.950.2957",
+    "address": "73397 Kevin Square Suite 232, Aaronhaven, MO 35214",
+    "birthdate": "1980-06-24",
+    "gender": "Female",
+    "civilStatus": "Married",
+    "governmentIds": {
+      "sss": "SSS-403992785",
+      "philhealth": "PH-933786859",
+      "pagibig": "PG-901329808",
+      "tin": "TIN-393758979"
+    },
+    "emergencyContact": {
+      "name": "Kathy Coffey",
+      "phone": "580-181-0282x1605"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP038",
+    "firstName": "James",
+    "lastName": "Harris",
+    "middleName": "Rachel",
+    "position": "Recruitment Specialist",
+    "department": "Human Resources",
+    "employmentStatus": "Active",
+    "dateHired": "2023-03-01",
+    "email": "hannahmiller@jackson-vega.net",
+    "phoneNumber": "(976)646-8106",
+    "address": "814 Cisneros Inlet, Lake Shannonhaven, OK 05974",
+    "birthdate": "2003-06-19",
+    "gender": "Male",
+    "civilStatus": "Widowed",
+    "governmentIds": {
+      "sss": "SSS-288187486",
+      "philhealth": "PH-885318788",
+      "pagibig": "PG-176327154",
+      "tin": "TIN-989502274"
+    },
+    "emergencyContact": {
+      "name": "Michael Jackson",
+      "phone": "9643460246"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP039",
+    "firstName": "Wendy",
+    "lastName": "Rowe",
+    "middleName": "Hayden",
+    "position": "Recruitment Specialist",
+    "department": "Human Resources",
+    "employmentStatus": "Active",
+    "dateHired": "2023-06-12",
+    "email": "lweaver@jones.biz",
+    "phoneNumber": "936-006-6711x0717",
+    "address": "Unit 0058 Box 7421, DPO AP 75077",
+    "birthdate": "2000-11-21",
+    "gender": "Female",
+    "civilStatus": "Single",
+    "governmentIds": {
+      "sss": "SSS-638215824",
+      "philhealth": "PH-914723849",
+      "pagibig": "PG-754933488",
+      "tin": "TIN-615116361"
+    },
+    "emergencyContact": {
+      "name": "Morgan Caldwell",
+      "phone": "+1-587-500-7939x705"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP040",
+    "firstName": "Erica",
+    "lastName": "Nguyen",
+    "middleName": "Kyle",
+    "position": "Logistics Officer",
+    "department": "Logistics",
+    "employmentStatus": "Active",
+    "dateHired": "2022-06-21",
+    "email": "cgreen@yahoo.com",
+    "phoneNumber": "(164)825-3938x9102",
+    "address": "207 Stewart Squares, Thomasfort, WV 99707",
+    "birthdate": "1997-01-18",
+    "gender": "Female",
+    "civilStatus": "Single",
+    "governmentIds": {
+      "sss": "SSS-690226229",
+      "philhealth": "PH-439988216",
+      "pagibig": "PG-575784182",
+      "tin": "TIN-792409411"
+    },
+    "emergencyContact": {
+      "name": "Kristy Ramos",
+      "phone": "(057)486-8540x14426"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP041",
+    "firstName": "Jennifer",
+    "lastName": "Anderson",
+    "middleName": "Tyler",
+    "position": "Customs Specialist",
+    "department": "Customs Clearance",
+    "employmentStatus": "Active",
+    "dateHired": "2024-04-15",
+    "email": "rodgersadam@peterson.com",
+    "phoneNumber": "001-388-442-0785x9358",
+    "address": "2393 Pratt Way Suite 555, North Ashleyshire, OH 32430",
+    "birthdate": "2004-08-21",
+    "gender": "Female",
+    "civilStatus": "Single",
+    "governmentIds": {
+      "sss": "SSS-378789975",
+      "philhealth": "PH-174132205",
+      "pagibig": "PG-717360541",
+      "tin": "TIN-719144742"
+    },
+    "emergencyContact": {
+      "name": "Heidi Russell",
+      "phone": "788-407-9561x3640"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP042",
+    "firstName": "Craig",
+    "lastName": "Johnson",
+    "middleName": "Crystal",
+    "position": "Documentation Specialist",
+    "department": "Freight Forwarding",
+    "employmentStatus": "Active",
+    "dateHired": "2022-08-22",
+    "email": "hartrichard@hotmail.com",
+    "phoneNumber": "001-006-182-9842x012",
+    "address": "7317 Derek Mills Suite 345, East Paulport, DC 91281",
+    "birthdate": "1997-05-29",
+    "gender": "Male",
+    "civilStatus": "Single",
+    "governmentIds": {
+      "sss": "SSS-770085187",
+      "philhealth": "PH-562109769",
+      "pagibig": "PG-804016975",
+      "tin": "TIN-977716302"
+    },
+    "emergencyContact": {
+      "name": "Robin Baldwin",
+      "phone": "001-836-688-9617x68598"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP043",
+    "firstName": "Michelle",
+    "lastName": "Burns",
+    "middleName": "Mackenzie",
+    "position": "Accounting Staff",
+    "department": "Accounting",
+    "employmentStatus": "Active",
+    "dateHired": "2023-01-12",
+    "email": "douglascatherine@hotmail.com",
+    "phoneNumber": "372-621-2485",
+    "address": "USNV Melendez, FPO AA 33423",
+    "birthdate": "1980-07-06",
+    "gender": "Female",
+    "civilStatus": "Widowed",
+    "governmentIds": {
+      "sss": "SSS-807052315",
+      "philhealth": "PH-910663499",
+      "pagibig": "PG-616201520",
+      "tin": "TIN-688420819"
+    },
+    "emergencyContact": {
+      "name": "Jared Reyes",
+      "phone": "5997226805"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP044",
+    "firstName": "Vincent",
+    "lastName": "Turner",
+    "middleName": "Vanessa",
+    "position": "Logistics Officer",
+    "department": "Logistics",
+    "employmentStatus": "Active",
+    "dateHired": "2023-01-11",
+    "email": "travis53@lopez-summers.com",
+    "phoneNumber": "849.557.6873",
+    "address": "16065 Perez Radial, Timothymouth, DE 86002",
+    "birthdate": "1977-05-26",
+    "gender": "Male",
+    "civilStatus": "Widowed",
+    "governmentIds": {
+      "sss": "SSS-493656996",
+      "philhealth": "PH-271279758",
+      "pagibig": "PG-589504918",
+      "tin": "TIN-900660186"
+    },
+    "emergencyContact": {
+      "name": "Michael Carter",
+      "phone": "(936)307-9975x56689"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP045",
+    "firstName": "Nathan",
+    "lastName": "Bates",
+    "middleName": "Albert",
+    "position": "Operations Coordinator",
+    "department": "Operations",
+    "employmentStatus": "Active",
+    "dateHired": "2025-02-22",
+    "email": "fwallace@miles.com",
+    "phoneNumber": "812-155-0610x11820",
+    "address": "722 Herrera Plains, Kendrabury, CT 87536",
+    "birthdate": "1972-12-20",
+    "gender": "Male",
+    "civilStatus": "Single",
+    "governmentIds": {
+      "sss": "SSS-420766285",
+      "philhealth": "PH-829235010",
+      "pagibig": "PG-188928052",
+      "tin": "TIN-350267865"
+    },
+    "emergencyContact": {
+      "name": "Timothy Morris",
+      "phone": "(092)568-2074"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP046",
+    "firstName": "Deborah",
+    "lastName": "Schaefer",
+    "middleName": "Jonathan",
+    "position": "Recruitment Specialist",
+    "department": "Human Resources",
+    "employmentStatus": "Active",
+    "dateHired": "2020-04-27",
+    "email": "holly61@bell.com",
+    "phoneNumber": "418.779.3215",
+    "address": "USCGC Francis, FPO AP 31144",
+    "birthdate": "1981-01-25",
+    "gender": "Female",
+    "civilStatus": "Married",
+    "governmentIds": {
+      "sss": "SSS-268474736",
+      "philhealth": "PH-649406491",
+      "pagibig": "PG-918121555",
+      "tin": "TIN-605539059"
+    },
+    "emergencyContact": {
+      "name": "Michelle Cox",
+      "phone": "(371)926-4015x19865"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP047",
+    "firstName": "Michael",
+    "lastName": "Todd",
+    "middleName": "Christopher",
+    "position": "Operations Supervisor",
+    "department": "Operations",
+    "employmentStatus": "Active",
+    "dateHired": "2023-12-10",
+    "email": "ywiggins@williams-hancock.net",
+    "phoneNumber": "301-416-3333x7454",
+    "address": "628 Jennifer Gateway Apt. 704, Hernandezhaven, WY 36796",
+    "birthdate": "1997-03-25",
+    "gender": "Male",
+    "civilStatus": "Single",
+    "governmentIds": {
+      "sss": "SSS-366368726",
+      "philhealth": "PH-674569675",
+      "pagibig": "PG-520024809",
+      "tin": "TIN-283698736"
+    },
+    "emergencyContact": {
+      "name": "Diana Nguyen",
+      "phone": "218.343.4953"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP048",
+    "firstName": "Brian",
+    "lastName": "Williams",
+    "middleName": "Shelby",
+    "position": "Operations Supervisor",
+    "department": "Operations",
+    "employmentStatus": "Active",
+    "dateHired": "2023-08-25",
+    "email": "ustone@hotmail.com",
+    "phoneNumber": "(780)557-9820x056",
+    "address": "348 Grimes Rue Apt. 004, Codyshire, VT 01122",
+    "birthdate": "1980-07-24",
+    "gender": "Male",
+    "civilStatus": "Widowed",
+    "governmentIds": {
+      "sss": "SSS-473092971",
+      "philhealth": "PH-189314006",
+      "pagibig": "PG-632489946",
+      "tin": "TIN-305079817"
+    },
+    "emergencyContact": {
+      "name": "Diana Clayton",
+      "phone": "837.978.9025x1411"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP049",
+    "firstName": "Stacy",
+    "lastName": "Sanchez",
+    "middleName": "Angela",
+    "position": "Accountant",
+    "department": "Accounting",
+    "employmentStatus": "Active",
+    "dateHired": "2020-05-19",
+    "email": "pday@yahoo.com",
+    "phoneNumber": "001-219-734-4663x6446",
+    "address": "7835 Jamie Throughway, South Todd, KS 76465",
+    "birthdate": "1969-08-05",
+    "gender": "Female",
+    "civilStatus": "Married",
+    "governmentIds": {
+      "sss": "SSS-276350804",
+      "philhealth": "PH-274502464",
+      "pagibig": "PG-489529938",
+      "tin": "TIN-668354450"
+    },
+    "emergencyContact": {
+      "name": "Carolyn Martinez",
+      "phone": "(355)963-7788"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP050",
+    "firstName": "Amy",
+    "lastName": "Snyder",
+    "middleName": "Amanda",
+    "position": "Dispatch Supervisor",
+    "department": "Dispatch",
+    "employmentStatus": "Active",
+    "dateHired": "2022-08-03",
+    "email": "marywillis@yahoo.com",
+    "phoneNumber": "974-799-1986",
+    "address": "09329 Howard Terrace, New Robert, CO 29699",
+    "birthdate": "1987-03-27",
+    "gender": "Female",
+    "civilStatus": "Married",
+    "governmentIds": {
+      "sss": "SSS-318279755",
+      "philhealth": "PH-293367202",
+      "pagibig": "PG-720022010",
+      "tin": "TIN-241009834"
+    },
+    "emergencyContact": {
+      "name": "Daniel Young",
+      "phone": "672-486-3453"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP051",
+    "firstName": "Chad",
+    "lastName": "Wilson",
+    "middleName": "Tracy",
+    "position": "Accounting Staff",
+    "department": "Accounting",
+    "employmentStatus": "Active",
+    "dateHired": "2023-11-02",
+    "email": "mcconnellphillip@gmail.com",
+    "phoneNumber": "700-774-2259x10741",
+    "address": "8552 Maria Wells Apt. 037, Jonesborough, WY 84528",
+    "birthdate": "1980-02-25",
+    "gender": "Male",
+    "civilStatus": "Single",
+    "governmentIds": {
+      "sss": "SSS-103532177",
+      "philhealth": "PH-300686864",
+      "pagibig": "PG-377220744",
+      "tin": "TIN-765083438"
+    },
+    "emergencyContact": {
+      "name": "Steven Nunez",
+      "phone": "(238)681-6965x689"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP052",
+    "firstName": "Anthony",
+    "lastName": "Fuller",
+    "middleName": "Eric",
+    "position": "Accountant",
+    "department": "Accounting",
+    "employmentStatus": "Active",
+    "dateHired": "2023-02-09",
+    "email": "tonya13@gmail.com",
+    "phoneNumber": "5387854188",
+    "address": "63757 Reed Burgs, Lake Micheleland, PA 32840",
+    "birthdate": "1990-09-21",
+    "gender": "Male",
+    "civilStatus": "Widowed",
+    "governmentIds": {
+      "sss": "SSS-234391153",
+      "philhealth": "PH-950712398",
+      "pagibig": "PG-536686307",
+      "tin": "TIN-647498553"
+    },
+    "emergencyContact": {
+      "name": "Claire Payne",
+      "phone": "+1-662-120-6443x528"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP053",
+    "firstName": "David",
+    "lastName": "Holmes",
+    "middleName": "Amy",
+    "position": "Customer Service Rep",
+    "department": "Customer Service",
+    "employmentStatus": "Active",
+    "dateHired": "2021-10-21",
+    "email": "stephaniesawyer@yahoo.com",
+    "phoneNumber": "623.861.7856x32902",
+    "address": "998 Thomas Highway, Harperberg, DE 08986",
+    "birthdate": "1980-07-18",
+    "gender": "Male",
+    "civilStatus": "Single",
+    "governmentIds": {
+      "sss": "SSS-575721862",
+      "philhealth": "PH-382239393",
+      "pagibig": "PG-844502764",
+      "tin": "TIN-297779819"
+    },
+    "emergencyContact": {
+      "name": "Denise Washington",
+      "phone": "888.764.1067x6176"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP054",
+    "firstName": "Zachary",
+    "lastName": "Diaz",
+    "middleName": "John",
+    "position": "HR Officer",
+    "department": "Human Resources",
+    "employmentStatus": "Active",
+    "dateHired": "2020-06-06",
+    "email": "courtney02@gmail.com",
+    "phoneNumber": "796.254.7778x66146",
+    "address": "2683 Baldwin Orchard Apt. 828, South Davidburgh, UT 62820",
+    "birthdate": "1969-05-14",
+    "gender": "Male",
+    "civilStatus": "Single",
+    "governmentIds": {
+      "sss": "SSS-789961929",
+      "philhealth": "PH-154033059",
+      "pagibig": "PG-487869028",
+      "tin": "TIN-596552846"
+    },
+    "emergencyContact": {
+      "name": "Justin Huerta",
+      "phone": "+1-903-803-8200"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP055",
+    "firstName": "Sonya",
+    "lastName": "Huang",
+    "middleName": "Troy",
+    "position": "Operations Supervisor",
+    "department": "Operations",
+    "employmentStatus": "Active",
+    "dateHired": "2023-07-03",
+    "email": "anitahernandez@yahoo.com",
+    "phoneNumber": "+1-336-497-9799x4083",
+    "address": "004 Aaron Prairie Apt. 087, Lake Christinebury, SD 82547",
+    "birthdate": "1969-09-28",
+    "gender": "Female",
+    "civilStatus": "Married",
+    "governmentIds": {
+      "sss": "SSS-317394234",
+      "philhealth": "PH-293632848",
+      "pagibig": "PG-583066783",
+      "tin": "TIN-864933831"
+    },
+    "emergencyContact": {
+      "name": "Anna King",
+      "phone": "(951)395-6754"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP056",
+    "firstName": "Tommy",
+    "lastName": "Williams",
+    "middleName": "Shawn",
+    "position": "Driver",
+    "department": "Dispatch",
+    "employmentStatus": "Active",
+    "dateHired": "2024-03-24",
+    "email": "barbara90@wilson.com",
+    "phoneNumber": "+1-585-121-5566x2727",
+    "address": "209 Alicia Pike, New Michaelmouth, AL 02010",
+    "birthdate": "1979-04-12",
+    "gender": "Male",
+    "civilStatus": "Married",
+    "governmentIds": {
+      "sss": "SSS-912850179",
+      "philhealth": "PH-941493804",
+      "pagibig": "PG-244654661",
+      "tin": "TIN-511721497"
+    },
+    "emergencyContact": {
+      "name": "Joshua Massey",
+      "phone": "+1-286-831-1526"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP057",
+    "firstName": "Anthony",
+    "lastName": "Sutton",
+    "middleName": "Brendan",
+    "position": "Recruitment Specialist",
+    "department": "Human Resources",
+    "employmentStatus": "Active",
+    "dateHired": "2022-08-07",
+    "email": "melissabrowning@jones-rhodes.com",
+    "phoneNumber": "028-636-6322x80725",
+    "address": "901 Campbell Mountains Apt. 242, Cindyfurt, SC 12538",
+    "birthdate": "1987-01-04",
+    "gender": "Male",
+    "civilStatus": "Widowed",
+    "governmentIds": {
+      "sss": "SSS-368104762",
+      "philhealth": "PH-149572755",
+      "pagibig": "PG-286879408",
+      "tin": "TIN-359102564"
+    },
+    "emergencyContact": {
+      "name": "Jeffrey Patton",
+      "phone": "001-141-695-2545x0015"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP058",
+    "firstName": "Samuel",
+    "lastName": "Soto",
+    "middleName": "Alexis",
+    "position": "IT Support",
+    "department": "IT Department",
+    "employmentStatus": "Active",
+    "dateHired": "2021-07-20",
+    "email": "tamara59@gray.com",
+    "phoneNumber": "697-161-8832x195",
+    "address": "3408 Stevens Locks, Santosfort, NM 29598",
+    "birthdate": "1971-04-26",
+    "gender": "Male",
+    "civilStatus": "Widowed",
+    "governmentIds": {
+      "sss": "SSS-676925975",
+      "philhealth": "PH-725650267",
+      "pagibig": "PG-586664603",
+      "tin": "TIN-324678866"
+    },
+    "emergencyContact": {
+      "name": "Anthony Mcmillan",
+      "phone": "(275)337-3096x5344"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP059",
+    "firstName": "David",
+    "lastName": "Gates",
+    "middleName": "Cindy",
+    "position": "Operations Supervisor",
+    "department": "Operations",
+    "employmentStatus": "Active",
+    "dateHired": "2024-12-23",
+    "email": "greed@martinez.com",
+    "phoneNumber": "(294)369-0742",
+    "address": "374 Smith Light, South Kimberly, OR 32064",
+    "birthdate": "2002-04-23",
+    "gender": "Male",
+    "civilStatus": "Married",
+    "governmentIds": {
+      "sss": "SSS-773265251",
+      "philhealth": "PH-424965542",
+      "pagibig": "PG-768126126",
+      "tin": "TIN-803551736"
+    },
+    "emergencyContact": {
+      "name": "Tyler Nunez",
+      "phone": "543-534-3872"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP060",
+    "firstName": "Russell",
+    "lastName": "Thomas",
+    "middleName": "Jennifer",
+    "position": "Logistics Officer",
+    "department": "Logistics",
+    "employmentStatus": "Active",
+    "dateHired": "2020-07-08",
+    "email": "alyssadavis@colon-woods.biz",
+    "phoneNumber": "(049)137-1546x3951",
+    "address": "61923 Maria Shoals Suite 686, West Donna, AL 65657",
+    "birthdate": "1987-02-17",
+    "gender": "Male",
+    "civilStatus": "Married",
+    "governmentIds": {
+      "sss": "SSS-159981543",
+      "philhealth": "PH-171497935",
+      "pagibig": "PG-687275697",
+      "tin": "TIN-514882594"
+    },
+    "emergencyContact": {
+      "name": "Michael Turner",
+      "phone": "+1-878-832-3658"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP061",
+    "firstName": "Scott",
+    "lastName": "Sanders",
+    "middleName": "Daniel",
+    "position": "Dispatch Supervisor",
+    "department": "Dispatch",
+    "employmentStatus": "Active",
+    "dateHired": "2020-06-09",
+    "email": "msmith@neal.net",
+    "phoneNumber": "845-569-3818",
+    "address": "40719 Stephanie Curve, Jessicaton, NY 52179",
+    "birthdate": "1982-11-01",
+    "gender": "Male",
+    "civilStatus": "Single",
+    "governmentIds": {
+      "sss": "SSS-953138919",
+      "philhealth": "PH-620634201",
+      "pagibig": "PG-133653110",
+      "tin": "TIN-239967543"
+    },
+    "emergencyContact": {
+      "name": "Stephanie Fuller",
+      "phone": "+1-961-543-6992x302"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP062",
+    "firstName": "Shane",
+    "lastName": "Johnson",
+    "middleName": "Gina",
+    "position": "Operations Supervisor",
+    "department": "Operations",
+    "employmentStatus": "Active",
+    "dateHired": "2023-09-10",
+    "email": "josephwaters@hamilton.com",
+    "phoneNumber": "(724)777-6045x35335",
+    "address": "83399 Wiggins Flat Apt. 121, Lake Patricia, NY 19777",
+    "birthdate": "1971-11-19",
+    "gender": "Male",
+    "civilStatus": "Married",
+    "governmentIds": {
+      "sss": "SSS-301298368",
+      "philhealth": "PH-521418406",
+      "pagibig": "PG-615274571",
+      "tin": "TIN-528155580"
+    },
+    "emergencyContact": {
+      "name": "Brian Morales",
+      "phone": "001-452-958-5481"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP063",
+    "firstName": "Erika",
+    "lastName": "West",
+    "middleName": "Kelsey",
+    "position": "Accounting Staff",
+    "department": "Accounting",
+    "employmentStatus": "Active",
+    "dateHired": "2021-01-22",
+    "email": "michelle39@yahoo.com",
+    "phoneNumber": "001-814-179-7343x530",
+    "address": "091 Bailey Mills Apt. 432, Walkerland, NH 86118",
+    "birthdate": "1991-11-10",
+    "gender": "Female",
+    "civilStatus": "Married",
+    "governmentIds": {
+      "sss": "SSS-492954418",
+      "philhealth": "PH-146797085",
+      "pagibig": "PG-519147105",
+      "tin": "TIN-573833536"
+    },
+    "emergencyContact": {
+      "name": "Kevin Warren",
+      "phone": "+1-190-262-0874x7089"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP064",
+    "firstName": "Jeffrey",
+    "lastName": "Bray",
+    "middleName": "Jessica",
+    "position": "Accounting Staff",
+    "department": "Accounting",
+    "employmentStatus": "Active",
+    "dateHired": "2025-01-21",
+    "email": "nweiss@hotmail.com",
+    "phoneNumber": "001-995-040-0860",
+    "address": "446 Jacob Stream, East Alison, NY 46427",
+    "birthdate": "2004-06-19",
+    "gender": "Male",
+    "civilStatus": "Married",
+    "governmentIds": {
+      "sss": "SSS-216716475",
+      "philhealth": "PH-744794374",
+      "pagibig": "PG-546565228",
+      "tin": "TIN-212531434"
+    },
+    "emergencyContact": {
+      "name": "Timothy Barnett",
+      "phone": "001-450-936-4126"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP065",
+    "firstName": "Gary",
+    "lastName": "Baxter",
+    "middleName": "Christine",
+    "position": "HR Officer",
+    "department": "Human Resources",
+    "employmentStatus": "Active",
+    "dateHired": "2024-03-04",
+    "email": "carolynrivera@yahoo.com",
+    "phoneNumber": "(950)493-8273x44356",
+    "address": "4936 Collins Springs Apt. 407, North Jessicamouth, LA 83393",
+    "birthdate": "1999-04-19",
+    "gender": "Male",
+    "civilStatus": "Married",
+    "governmentIds": {
+      "sss": "SSS-268956920",
+      "philhealth": "PH-501711618",
+      "pagibig": "PG-782731561",
+      "tin": "TIN-469038651"
+    },
+    "emergencyContact": {
+      "name": "Lauren Hughes",
+      "phone": "870.875.3921"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP066",
+    "firstName": "Adam",
+    "lastName": "Henson",
+    "middleName": "Troy",
+    "position": "Dispatch Supervisor",
+    "department": "Dispatch",
+    "employmentStatus": "Active",
+    "dateHired": "2024-04-26",
+    "email": "charlesgomez@wilson-potter.com",
+    "phoneNumber": "(595)919-8576x82846",
+    "address": "52608 Kenneth Squares, Barkerburgh, NE 44475",
+    "birthdate": "1971-01-13",
+    "gender": "Male",
+    "civilStatus": "Married",
+    "governmentIds": {
+      "sss": "SSS-363401591",
+      "philhealth": "PH-890911319",
+      "pagibig": "PG-867914700",
+      "tin": "TIN-627249849"
+    },
+    "emergencyContact": {
+      "name": "Justin Ford",
+      "phone": "(959)971-8936"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP067",
+    "firstName": "Shari",
+    "lastName": "Shepherd",
+    "middleName": "Tyler",
+    "position": "Dispatch Supervisor",
+    "department": "Dispatch",
+    "employmentStatus": "Active",
+    "dateHired": "2023-07-26",
+    "email": "mason40@thomas.info",
+    "phoneNumber": "895.259.5690x626",
+    "address": "69421 Hall Extensions Apt. 474, North Paulmouth, HI 49065",
+    "birthdate": "1981-03-25",
+    "gender": "Female",
+    "civilStatus": "Married",
+    "governmentIds": {
+      "sss": "SSS-925572368",
+      "philhealth": "PH-359996032",
+      "pagibig": "PG-236294477",
+      "tin": "TIN-366142500"
+    },
+    "emergencyContact": {
+      "name": "Richard Burgess",
+      "phone": "001-205-703-5335x685"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP068",
+    "firstName": "John",
+    "lastName": "Thompson",
+    "middleName": "April",
+    "position": "Operations Supervisor",
+    "department": "Operations",
+    "employmentStatus": "Active",
+    "dateHired": "2024-11-02",
+    "email": "uanderson@gonzalez-murphy.info",
+    "phoneNumber": "816-350-8144x07348",
+    "address": "USNS Waller, FPO AA 27689",
+    "birthdate": "2001-02-22",
+    "gender": "Male",
+    "civilStatus": "Married",
+    "governmentIds": {
+      "sss": "SSS-638511580",
+      "philhealth": "PH-997513718",
+      "pagibig": "PG-853967107",
+      "tin": "TIN-101783015"
+    },
+    "emergencyContact": {
+      "name": "Ethan Brown",
+      "phone": "(655)372-4849"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP069",
+    "firstName": "Christopher",
+    "lastName": "Simpson",
+    "middleName": "Anthony",
+    "position": "Logistics Officer",
+    "department": "Logistics",
+    "employmentStatus": "Active",
+    "dateHired": "2024-01-24",
+    "email": "nguyenkevin@gmail.com",
+    "phoneNumber": "9298947760",
+    "address": "8256 Simmons Burgs, Brooksmouth, NJ 32626",
+    "birthdate": "1977-11-22",
+    "gender": "Male",
+    "civilStatus": "Widowed",
+    "governmentIds": {
+      "sss": "SSS-872031270",
+      "philhealth": "PH-378430193",
+      "pagibig": "PG-503784667",
+      "tin": "TIN-442881477"
+    },
+    "emergencyContact": {
+      "name": "Robin Parker",
+      "phone": "210-953-1683x737"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  },
+  {
+    "employeeId": "EMP070",
+    "firstName": "Sylvia",
+    "lastName": "Parker",
+    "middleName": "Rebecca",
+    "position": "Accountant",
+    "department": "Accounting",
+    "employmentStatus": "Active",
+    "dateHired": "2022-12-03",
+    "email": "kevin55@bailey-owens.com",
+    "phoneNumber": "891.126.6163",
+    "address": "6742 Black Light, Christopherchester, WY 65609",
+    "birthdate": "1999-12-02",
+    "gender": "Female",
+    "civilStatus": "Single",
+    "governmentIds": {
+      "sss": "SSS-759439731",
+      "philhealth": "PH-124689533",
+      "pagibig": "PG-582967654",
+      "tin": "TIN-123271611"
+    },
+    "emergencyContact": {
+      "name": "Alyssa Goodman",
+      "phone": "+1-915-660-3728"
+    },
+    "profilePhoto": "/uploads/emp1.jpg"
+  }
+]
